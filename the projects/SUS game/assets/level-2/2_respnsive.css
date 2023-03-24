@@ -1,0 +1,42 @@
+@media only screen and (max-width: 1140px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #controls{
+        margin-top: 100px;
+        margin-right: 61px;
+    }
+    .instructions{
+        display: none;
+    }
+    .instructions2{
+        bottom: -250px;
+    }
+    #main_game{
+        transform: scale(0.8);
+        left: 61px;
+    }
+    .buttons{
+        width: 90px;
+        height: 90px;
+    }
+    .buttons i{
+        font-size: 80px;
+    }
+
+    #down {
+    margin-top: 160px;
+    }
+    #right {
+        margin-left: 160px;
+    }
+    #up {
+        margin-bottom: 160px;
+    }
+    #left {
+        margin-right: 160px;
+    }
+}

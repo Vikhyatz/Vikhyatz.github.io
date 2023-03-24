@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500&family=Source+Sans+Pro&family=Ubuntu+Mono&display=swap');
+
+/* 
+font-family: 'DM Mono', monospace;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Ubuntu Mono', monospace;
+*/
+::-webkit-scrollbar {
+    width: 3px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(68, 67, 67); 
+}
+::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    width: 100%;
+    min-height: 300vh;
+	overflow-x: hidden;
+}
+.backgroundImage{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.466), rgba(0, 0, 0, 0.856)) , url(bg2.jpg) no-repeat;
+    background-size: 100% 46.875em;
+    /* background-position: -400px 0; */
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+.backgroundImageHeightRecover{
+    width: 100%;
+    height: 100vh;
+}
+nav h2{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    letter-spacing: 3px;
+    margin: 25px 0 0 50px;
+    cursor: pointer;
+}
+#logo{
+    text-decoration: none;
+}
+a{
+    color: white;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    transition: 0.4s;
+    position: fixed;
+    z-index: 1111111;
+}
+nav:hover{
+    background-color: black;
+
+}
+
+.navLinks{
+    color: white;
+}
+
+.navDark{
+    background-color: rgba(0, 0, 0, 0.658);
+}
+.navDark ul li .linkHovers{
+    opacity: 1;
+
+}
+.active{
+    color: lime;
+}
+.navLinks ul{
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+    margin: 30px 50px 0 0;
+    font-family: 'Roboto', sans-serif;
+}
+.navLinks ul a {
+    color: white;
+    text-decoration: none;
+}
+.navLinks ul li{
+    cursor: pointer;
+}
+
+.line{
+    background-color: white;
+    width: 0;
+    height: 4px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.navLinks ul li:hover .line{
+    width: 40px;
+}
+.linkHovers{
+    opacity: 0;
+    transition: 0.5s;
+    color: lime;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+.navLinks ul li:hover .linkHovers{
+    opacity: 1;
+
+}
+
+/* HOME */
+
+#Home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.Herodiv{
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #EEF8FF;
+    animation: load 4s;
+    margin-top: 6em;
+    text-align: left;
+    width: 80%;
+
+}
+.Herodiv h3:nth-child(1){
+    font-size: 18px;
+    color: lime;
+}
+.Herodiv h3:nth-child(2){
+    font-size: 60px;
+    color: #C4EDFA;
+}
+
+@keyframes load {
+    from{
+        filter: blur(5px);
+    }
+    to{
+        filter: blur(0);
+    }
+}
+
+.Herodiv h5{
+    color: #a4acc4;
+}
+
+.social-elements{
+    transition: 0.2s;
+}
+
+.social-elements:hover{
+    transform: translate(0 , -3px);
+}
+.socials{
+    width: fit-content;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.socials a{
+    color: lime;
+}
+#scroller-a{
+    /* transform: translate(0, 5em); */
+    margin-top: 10em;
+}
+.scroller{
+    width: 30px;
+    height: 45px;
+    border: 3px solid white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scrollerCircle{
+    width:  5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: white;
+    transform: translate(0, -10px);
+    animation: mousewheel 2s linear infinite;
+}
+@keyframes mousewheel {
+    0%{
+        transform: translate(0, -10px);
+    }
+    40%{
+        transform: translate(0, -13px);
+    }
+    100%{
+        transform: translate(0, 10px);
+        opacity: 0;
+    }
+}
+
+/* ABOUT */
+
+#About{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
+#About h2{
+    color: lime;
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    margin-top: 4em;
+}
+.aboutContent{
+    width: 80vw;
+    height: 500px;
+    background-color: #353638;
+    border: 2px solid #5C5E61;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.windowNavigators{
+    width: 80px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+.red, .yellow, .green{
+    width:  15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.red{
+    background-color: #F85B50;
+}
+.yellow{
+    background-color: #FABA2A;
+}
+.green{
+    background-color: #2CC642;
+}
+.fileName{
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #AFB0B2;
+    margin-top: 5px;
+}
+.taskbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    height: 40px;
+}
+.aboutNumbers{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    color: #525358;
+}
+
+.taskbar2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+}
+.taskbar2_1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: fit-content;
+}
+.taskbar2_21{
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+}
+.taskbar2_1 select{
+    border-radius: 5px;
+    border: 1px solid #5C5E61;
+    background-color: #353638;
+    color: #B3B4B6;
+    margin-left: 10px;
+    width: 180px;
+}
+.taskbar2_1 span{
+    font-size: 13px;
+    color: #A0A1A3;
+}
+.taskbar2_2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    text-align: center;
+}
+.taskbar2_2 i{
+    color: #B8B9BB;
+    height: 19px;
+}
+.taskbar2_2 span{
+    font-size: 12px;
+    color: #A0A1A3;
+}
+.aboutLine{
+    height: 1px;
+    width: 100%;
+    background-color: black;
+}
+.aboutMain{
+    width: 100%;
+    height: calc(100% - 80px);
+    background-color: #25262B;
+    display: flex;
+    flex-direction: row;
+}
+.aboutNumbers{
+    margin-left: 10px;
+    width: fit-content;
+    height: fit-content;
+    transform: translate(0,10px);
+}
+.aboutNumbers span{
+    text-align: center;
+}
+.aboutMEEE{
+    width: 50%;
+    color: white;
+    font-family:  Consolas, 'Courier New', monospace;
+    line-height: 1.55;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.aboutMEEE div{
+    margin-left: 40px;
+}
+.one{
+    color: #8a71b4;
+}
+.two{
+    color: #799AC1;
+}
+.three{
+    color: #becc43;
+}
+.four{
+    color: lime;
+}
+
+/* projects */
+
+
+#Projects{
+    width: 100%;
+    height: 1600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    background-color: #0A192F;
+    border-radius: 15px;
+}
+
+#Projects h2:nth-child(1){
+    color: lime;
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    margin-top: 4em;
+}
+.some-projects{
+    margin-top: 50px;
+    width: 80%;
+    height: 500px;
+    font-family: Calibri, sans-serif;
+    color: white;
+    position: relative;
+}
+.project-box{
+    width: 800px;
+    height: 430px;
+    display: flex;
+    align-items: center;
+}
+.img{
+    width: 580px;
+    height: 325px;
+    position: absolute;
+    right: 100px;
+    overflow: hidden;
+    box-shadow: 0 20px 30px -15px rgba(0, 0, 0, 0.7);
+}
+.pro-description{
+    position: absolute;
+    left: 80px;
+}
+
+
+
+.img-inverse{
+    width: 580px;
+    height: 325px;
+    position: absolute;
+    left: 100px;
+    /* border-radius: 10px; */
+    overflow: hidden;
+    box-shadow: 0 20px 30px -15px rgba(0, 0, 0, 0.7);
+}
+.pro-description-inverse{
+    position: absolute;
+    right: 80px;
+    text-align: right;
+}
+.pro-description-inverse span{
+    color: #00fde0;
+    font-family: 'Ubuntu Mono', monospace;
+    margin-right: 20px;
+}
+.pro-description-inverse h1{
+    margin-top: 10px;
+    font-size: 30px;
+    margin-right: 20px;
+}
+.pro-description-inverse h1:hover{
+    color: #00fde0;
+}
+.prolinks-inverse{
+    display: flex;
+    gap: 18px;
+    position: absolute;
+    right: 20px;
+}
+.prolinks-inverse i{
+    font-size: 23px;
+    margin-top: 20px;
+}
+.img-inverse:hover .img-shadow{
+    background-color: transparent;
+}
+.img-inverse img{
+    position: absolute;
+}
+
+
+
+
+
+.img:hover .img-shadow{
+    background-color: transparent;
+}
+.img img{
+    position: absolute;
+}
+.img-shadow{
+    background-color: #225852a9;
+    width: 580px;
+    height: 325px;
+    position: absolute;
+    transition: 0.3s;
+}
+s{
+	text-decoration: none;
+	color: #00fde0;
+}
+
+.pro-description span{
+    color: #00fde0;
+    font-family: 'Ubuntu Mono', monospace;
+    margin-left: 20px;
+}
+.pro-description h1{
+    margin-top: 10px;
+    font-size: 30px;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+.pro-description h1:hover{
+    color: #00fde0;
+}
+.probox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 130px;
+    border-radius: 7px;
+    background-color: #112240;
+    color: #8F9AB9;
+    margin-top: 20px;
+    box-shadow: 0 20px 30px -15px rgba(0, 0, 0, 0.7);
+}
+p{
+    width: 400px;
+    font-size: 20px;
+}
+.prolinks{
+    display: flex;
+    gap: 18px;
+    margin-left: 20px;
+}
+.prolinks i{
+    font-size: 23px;
+    margin-top: 20px;
+}

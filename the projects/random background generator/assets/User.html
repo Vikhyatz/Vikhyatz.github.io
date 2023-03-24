@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background Generator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            min-height: 100vh;
+            text-align: center;
+            flex-direction: column;
+
+            /* background-color: rgb(255, 255, 255); */
+        }
+        h3{
+            font-weight: 500;
+        }
+        #btnn{
+            padding: 20px;
+            width: 250px;
+            height: 200px;
+            border-radius: 20px;
+            border: 8px solid #321d5e;
+            box-shadow: 0 10px 0 0 #321d5e;
+            background-color: #fce02e;
+            z-index: 111111111;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        #changeBtn{
+            padding: 20px;
+            width: 150px;
+            height: 100px;
+            text-align: center;
+            border-radius: 20px;
+            border: 8px solid #321d5e;
+            box-shadow: 0 10px 0 0 #321d5e;
+            background-color: #fce02e;
+            z-index: 111111111;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+
+button:active{
+    transform: translate(0px, 10px);
+    box-shadow: 0 0 0 0;
+}
+#colourName{
+    margin-top: 30px;
+}
+input{
+    width: 38px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="btn">
+        <button id="btnn">Generate Background</button>
+    </div>
+    <div id="colourName">
+        <h3>
+            rgb(<input id="left" type="text" placeholder="red" maxlength="3"> , <input id="middle" type="text" placeholder="blue" maxlength="3"> , <input id="right" type="text" placeholder="green" maxlength="3">)
+        </h3>
+    </div>
+</body>
+
+<script>
+
+    
+    let left = document.getElementById('left')
+    let middle = document.getElementById('middle')
+    let right = document.getElementById('right')
+    
+    let btn = document.getElementById('btnn')
+    // let changeBtn = document.getElementById('changeBtn')
+
+
+    setInterval(() => {
+        btn.addEventListener('click', ()=>{
+            document.body.style.backgroundColor = `rgb(${left.value}, ${middle.value}, ${right.value}`
+            
+    })
+    }, 10);
+
+
+
+
+
+</script>
+
+</html>

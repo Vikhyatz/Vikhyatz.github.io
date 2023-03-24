@@ -1,0 +1,335 @@
+/* projects .pro-btn animation */
+
+.pro-btn-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pro-btn {
+    position: relative;
+    padding: 12px 35px;
+    background: #53D5BA;
+    font-size: 17px;
+    font-weight: 700;
+    color: black;
+    border: 3px solid #53D5BA;
+    border-radius: 8px;
+    box-shadow: 0 0 0 #fec1958c;
+    transition: all .3s ease-in-out;
+}
+
+.star-1 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all .8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all .6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all .8s ease;
+}
+
+.pro-btn:hover {
+    background: transparent;
+    color: #53D5BA;
+    box-shadow: 0 0 25px #fec1958c;
+}
+
+.pro-btn:hover .star-1 {
+    position: absolute;
+    top: -80%;
+    left: -30%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.pro-btn:hover .star-2 {
+    position: absolute;
+    top: -25%;
+    left: 10%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.pro-btn:hover .star-3 {
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.pro-btn:hover .star-4 {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.pro-btn:hover .star-5 {
+    position: absolute;
+    top: 25%;
+    left: 115%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.pro-btn:hover .star-6 {
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.fil0 {
+    fill: #FFFDEF
+}
+
+
+/* projects .pro-btn animation */
+
+
+
+
+
+
+/* CONTACT ME */
+#Contact {
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    border-radius: 20px;
+}
+
+#Contact h2:nth-child(1) {
+    color: lime;
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    margin-top: 4em;
+}
+
+/* main form */
+
+input[type=text],
+input[type=email],
+textarea {
+    width: 300px;
+    padding: 12px;
+    font-size: 25px;
+    border: 0;
+    outline: 0;
+    color: white;
+    box-sizing: border-box;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    resize: vertical;
+    text-align: center;
+    background-color: black;
+    border-bottom: 2px solid lime;
+    transition: 0.9s;
+}
+
+
+form div {
+    width: 630px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#subinp {
+    width: 100%;
+}
+
+textarea {
+
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+::placeholder {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    padding: 20px;
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.form-btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    border: 3px solid lime;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+}
+
+.form-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lime;
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+.form-btn:hover{
+    color: black;
+}
+.form-btn:hover::before {
+    transform: translateX(0);
+}
+
+
+/* CONTACT ME */
+/* FOOTER */
+
+footer{
+    color: lime;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.footer-social-elements{
+    transition: 0.2s;
+}
+
+.footer-social-elements:hover{
+    transform: translate(0 , -3px);
+}
+.footer-socials{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.footer-socials a{
+    color: lime;
+}
+
+/* FOOTER */
+#hamburger-navLinks{
+	display: none;
+}
+#hamburger-menu{
+    color: white;
+}
+.Hamburger-main{
+    display: none;
+}
+#hamone, #hamtwo{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+}
+#hamtwo{
+    transform: rotate(45deg);
+    display: none;
+    color: black;
+}
+.hamburger-active{
+    font-weight: 700;
+    border: 1px solid black;
+    padding: 10px;
+}

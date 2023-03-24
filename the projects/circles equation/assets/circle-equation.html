@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIRCLE EQUATION FINDER</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+        /* font-family: 'Nunito', sans-serif; */
+        /* font-family: 'Poppins', sans-serif; */
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            flex-direction: column;
+
+        }
+        .inps{
+            width: 100px;
+        }
+        .MainContainer{
+            font-size: 20px;
+        }
+        button{
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 17px;
+        /* position: absolute; */
+        margin-top: 30px;
+        }
+        button:hover{
+            background-color: #333;
+            transition: 0.3s;
+            border: 2px solid;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="MainContainer">
+
+        <div class="g">
+            H = <input type="text" id="h" class="inps">
+        </div>
+
+        <div class="f">
+            K = <input type="text" id="k" class="inps">
+        </div>
+
+        <div class="radius">
+            Radius = <input type="text" id="radius" class="inps">
+        </div>
+
+    </div>
+    <button id="btn">CALCULATE EQUATION</button>
+    <p id="result">
+
+    </p>
+</body>
+<script>
+    
+    let btn = document.getElementById('btn')
+    let result = document.getElementById('result')
+    
+    btn.addEventListener('click', ()=>{
+        let h = document.getElementById('h').value
+        let k = document.getElementById('k').value
+        let r = document.getElementById('radius').value
+        
+        result.innerText = `
+        x² + y² +(${-2*h}x) +(${-2*k}y) +(${(h*h)+(k*k)-(r*r)}) = 0
+        `
+    })
+
+</script>
+</html>

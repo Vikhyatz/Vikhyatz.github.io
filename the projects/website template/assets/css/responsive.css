@@ -1,0 +1,183 @@
+@media only screen and (max-width: 1100px) {
+    html{
+        width: 110vw;
+    }
+    #navbar ul{
+        display: none;
+        /* will return here for the haburger menu */
+    }
+	body{
+        background-size: 100% auto;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+	body{
+		background-size: 440vw 95vh;
+		background-position-x: -600px;
+		overflow-x: hidden;
+	}
+	html{
+		width: 180vw;
+	}
+	#heroContent1{
+		margin-left: 20px;
+	}
+	#logo{
+		margin: 27px 0 0 40px;
+	}
+	#heroHeading{
+		font-size: 40px;
+	}
+	#loremHeading{
+		width: 330px;
+/* 		margin-left: 160px; */
+	}
+	#heroBtnDiv{
+		flex-direction: column;
+		margin-left: 60px;
+	}
+	#heroButton1{
+		margin-left: 0;
+	}
+	.mainSection{
+		width: 55%;
+	}
+	.headss{
+		font-weight: 400;
+	}
+	.headssPara{
+		font-size: 14px;
+	}
+	#AboutUsArticle{
+		flex-direction: column;
+	}
+	#AboutUs{
+		margin-top: 400px;
+/* 		height: 200px; */
+	}
+	.aboutPara{
+		width: 340px;
+		text-align: center;
+	}
+	#AboutUsArticle img{
+		width: 340px;
+		border: 2px solid black;
+/* 		gap: 0; */
+		position: relative;
+		bottom: 150px;
+	}
+	#portfolioPhotos{
+/* 		display: block; */
+/* 		margin-top: 50em; */
+		grid-template-columns: auto auto;
+/* 		row-gap: -100px; */
+	}
+	.pp{
+		transform: scale(0.5);
+	}
+	#pp2,#pp4,#pp6,#pp8{
+		position: relative;
+		right: 70px;
+	}
+	#pp1,#pp3,#pp5,#pp7{
+		position: relative;
+		left: 80px;
+	}
+	#pp3,#pp4{
+		bottom: 100px;
+	}
+	#pp5,#pp6{
+		bottom: 200px;
+	}
+	#pp7,#pp8{
+		bottom: 300px;
+	}
+	#portfolioHead{
+		margin-top: 300px;
+	}
+/* 	testimonials */
+	#testimonials{
+		background-size: 150% 470px;
+		background-position-x: -200px;
+		position: relative;
+		right: 150px;
+	}
+	.testimonialsLines{
+		width: 360px;
+		margin-left: 170px;
+	}
+	.testimonialsNames{
+		margin-left: 170px;
+	}
+	/* animation */
+	@keyframes animateLines {
+    0%{
+        transform: translate(0, 0);
+    }
+    12.5%{
+        transform: translate(0, 0);
+    }
+    25%{
+        transform: translate(-680px, 0);
+    }
+    37.5%{
+        transform: translate(-680px, 0);
+    }
+    50%{
+        transform: translate(-1410px, 0);
+        
+    }
+    62.5%{
+        transform: translate(-1410px, 0);
+    }
+    75%{
+        transform: translate(-2190px, 0);
+    }
+    100%{
+        transform: translate(-2190px, 0);
+    }
+}
+/* animation */
+
+	.servicesNamed{
+		grid-template-columns: auto;
+		text-align: center;
+	}
+
+	.teamPeople{
+/* 		flex-direction: column; */
+		grid-template-columns: auto;
+		text-align: center;
+	}
+
+	.latestNews{
+		flex-direction: column;
+	}
+
+	.blogBtn{
+		width: 100vw;
+	}
+	.inps2{
+		flex-direction: column;
+	}
+	.inps{
+		width: 300px;	
+	}
+	#input3{
+		width: 300px;
+	}
+	#txtarea{
+		width: 290px;
+	}
+	.footer{
+		width: 100vw;
+		font-size: 10px;
+	}
+	#contact{
+		height: 500px;
+	}
+	#Message{
+		margin-top: 50px;
+	}
+}

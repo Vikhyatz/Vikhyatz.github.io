@@ -1,0 +1,43 @@
+@media only screen and (max-width: 1150px) {
+    .instructions {
+        display: none;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .instructions2 {
+        bottom: -200px;
+    }
+
+    #controls {
+        margin-top: 100px;
+        margin-left: 70px;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    #main_game {
+        object-fit: contain;
+        margin-left: 200px;
+    }
+
+    #controls {
+        margin-left: 200px;
+        margin-top: 200px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    #Nextgame {
+        position: relative;
+        top: 200px;
+        margin-left: 300px;
+    }
+}

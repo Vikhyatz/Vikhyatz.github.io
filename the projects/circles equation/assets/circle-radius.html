@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>CENTER AND RADIUS CALCULATOR</title>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    /* font-family: 'Nunito', sans-serif; */
+    /* font-family: 'Poppins', sans-serif; */
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        gap: 20px;
+    }
+    h3{
+        font-family: 'Nunito', sans-serif;
+        font-size: 20px;
+    }
+
+    .equation{
+        font-size: 23px;
+    }
+
+    .inps{
+        width: 20px;
+        text-align: center;
+        font-size: 20px;
+        /* border: 0; */
+    }
+
+    button{
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 17px;
+        /* position: absolute; */
+    }
+    button:hover{
+        background-color: #333;
+        transition: 0.3s;
+        border: 2px solid;
+    }
+    #resultss{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 600px;
+        height: 130px;
+    }
+    #resultsss{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        text-align: center;
+        gap: 100px;
+
+    }
+    </style>
+
+
+
+
+</head>
+<body>
+    <h3>CENTER AND RADIUS CALCULATOR</h3>
+    <div class="equation">
+        x² + y² + <input type="text" id="g" class="inps" placeholder="g">x + <input type="text" id="f" class="inps" placeholder="f">y + <input type="text" id="c" class="inps" placeholder="c"> = 0
+    </div>
+    <button id="calculate">calculate</button>
+    <div id="resultss">
+        <h4>RESULTS</h4>
+        <div id="resultsss">
+            <p id="resultCenter">
+                C(h,k)
+                <br>
+                <strong id="cr"></strong>
+            </p>
+            <p id="resultRadius">
+                radius=√g² + f² - c
+                <strong id="rr"></strong>
+            </p>
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+    let btn = document.getElementById('calculate')
+    let cr = document.getElementById('cr')
+    let rr = document.getElementById('rr')
+    btn.addEventListener('click', ()=>{
+        let resultsss = document.getElementById('resultsss')
+        resultsss.style.display = 'flex'
+
+        let g = document.getElementById('g').value
+        let f = document.getElementById('f').value
+        let c = document.getElementById('c').value
+        let h = -g/2
+        let k = -f/2
+        cr.innerHTML = `
+        h = ${-g}/2
+        <br>
+        k = ${-f}/2
+        <br>
+        C( ${-g/2} , ${-f/2} )
+        `
+
+        rr.innerText = `
+        ${Math.sqrt((h*h)+(k*k)-(c))}
+        `
+    })
+</script>
+</html>

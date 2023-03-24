@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+#main_game {
+    background: linear-gradient(red, #e8630d);
+    width: 570px;
+    height: 500px;
+    margin-left: 70px;
+    margin-top: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.six_boxes {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border: 1px solid black;
+    margin-bottom: 100px;
+    border-radius: 10px;
+}
+
+.indicator {
+    font-family: consolas;
+    letter-spacing: 4px;
+    column-rule-color: grey;
+}
+
+#ind1 {
+    margin-bottom: 100px;
+}
+
+#b1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#player {
+    position: relative;
+    z-index: 100;
+}
+
+/* VIRUTAL BUTTONS */
+.buttons {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    /* top: 40%;
+    right: 20%; */
+    /* background-color: wheat; */
+
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#controls {
+    margin-left: 10em;
+    margin-top: 3em;
+    width: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.buttons i {
+    font-size: 60px;
+    color: #f5deb3;
+
+}
+
+.buttons i:hover {
+    color: #8d7751;
+}
+
+#down {
+    margin-top: 120px;
+}
+
+#right {
+    margin-left: 120px;
+}
+
+#up {
+    margin-bottom: 120px;
+}
+
+#left {
+    margin-right: 120px;
+}
+
+.instructions {
+    position: absolute;
+    top: 0;
+    width: 600px;
+    height: 100px;
+    color: white;
+    text-align: center;
+}
+
+.instructions2 {
+    position: absolute;
+    bottom: 0;
+    width: 600px;
+    height: 100px;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* VIRUTAL BUTTONS */
+#key {
+    transform: rotate(45deg);
+}
+
+#b6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#winner {
+    position: absolute;
+    display: none;
+}
+
+#gameOver {
+    position: absolute;
+    color: white;
+    text-align: center;
+    background: linear-gradient(#e8630d, red);
+    border-radius: 10px;
+    margin-top: 12em;
+    margin-left: 12em;
+    width: 300px;
+    height: 200px;
+    visibility: hidden;
+}
+
+#gameOver button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+}
+
+#Nextgame {
+    position: absolute;
+    right: 17%;
+    top: 35%;
+    text-align: center;
+    color: white;
+    background-color: green;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+#Nextgame button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+}

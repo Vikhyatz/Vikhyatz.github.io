@@ -1,0 +1,34 @@
+@media only screen and (max-width: 800px) {
+    body {
+        overflow-y: visible;
+    }
+
+    .story_and_shit {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info {
+        margin-right: 100px;
+        margin-top: 30px;
+        width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .info {
+        font-size: 14px;
+        width: 60vw;
+    }
+
+    .player {
+        width: 75vw;
+        height: 80vw;
+    }
+
+    .start {
+        width: 51vw;
+        font-size: 15px;
+        right: 30%;
+    }
+}

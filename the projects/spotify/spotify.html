@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel=" stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+	<link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+	<script src="https://kit.fontawesome.com/60734bdbf3.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="assets/css/responsive.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/styles2.css">
+	<title>spotify</title>
+</head>
+
+<body>
+
+	<audio id="main_audio">
+	</audio>
+
+	<div id="playlist">
+		<h1>Spotify</h1>
+		<div id="playlist-2">
+			<span id="playlist-tag"><i class="fa-solid fa-music"></i>My Songs</span>
+			<span id="crsoo" onclick="back()"><i class="fa-solid fa-xmark"></i></span>
+		</div>
+		<div id="playlist_songs">
+
+			<div class="songs" id="song_01">
+				<span class="song_number">01</span>
+				<img width="40px" src="assets/images/image-1.jpg" alt="">
+				<div id="title_01">
+					<span class="song_name">It's Not So Bad</span>
+					<span class="singer">dybbukk</span>
+				</div>
+				<i class="fa-solid fa-circle-play"></i>
+			</div>
+
+
+			<div class="songs" id="song_02">
+				<span class="song_number">02</span>
+				<img width="40px" src="assets/images/image-2.jpg" alt="">
+				<div id="title_01">
+					<span class="song_name">summer on my mind</span>
+					<span class="singer">tazzy</span>
+				</div>
+				<i class="fa-solid fa-circle-play"></i>
+			</div>
+
+
+			<div class="songs" id="song_03">
+				<span class="song_number">03</span>
+				<img width="40px" src="assets/images/image-3.jpg" alt="">
+				<div id="title_01">
+					<span class="song_name">Je M'appelle</span>
+					<span class="singer">benzz</span>
+				</div>
+				<i class="fa-solid fa-circle-play"></i>
+			</div>
+
+
+			<div class="songs" id="song_04">
+				<span class="song_number">04</span>
+				<img width="40px" src="assets/images/image-4.jpg" alt="">
+				<div id="title_01">
+					<span class="song_name">By The Sword</span>
+					<span class="singer">Jake Hill</span>
+				</div>
+				<i class="fa-solid fa-circle-play"></i>
+			</div>
+
+
+			<div class="songs" id="song_05">
+				<span class="song_number">05</span>
+				<img width="40px" src="assets/images/image-5.jpg" alt="">
+				<div id="title_01">
+					<span class="song_name">Snake</span>
+					<span class="singer">Nathan Evans</span>
+				</div>
+				<i class="fa-solid fa-circle-play"></i>
+			</div>
+
+			<div class="songs" id="song_06">
+				<span class="song_number">06</span>
+				<img width="40px" src="assets/images/image-6.jpg" alt="">
+				<div id="title_01">
+					<span class="song_name">Faded</span>
+					<span class="singer">Alan Walker</span>
+				</div>
+				<i class="fa-solid fa-circle-play"></i>
+			</div>
+
+			<div class="songs" id="song_07">
+				<span class="song_number">07</span>
+				<img width="40px" src="assets/images/image-7.jpg" alt="">
+				<div id="title_01">
+					<span class="song_name">Elevated</span>
+					<span class="singer">Shubh</span>
+				</div>
+				<i class="fa-solid fa-circle-play"></i>
+			</div>
+		</div>
+	</div>
+	<div id="hero_content">
+		<div class="toitlee">
+			<div class="full_titole">
+				<nav>
+					<ul>
+						<div id="for_responsive">
+							<div id="hero_headings">
+								<div id="hamburger_menu" onclick="playlist()"><i class="fa-solid fa-bars"></i></div>
+								<div class="hero_list" id="main_list">Discover</div>
+								<div class="hero_list" id="main_list2">My <span>Songs</span></div>
+							</div>
+
+							<div id="input_all">
+								<input id="search_inp" type="search" placeholder="Search Music...">
+							</div>
+						</div>
+
+						<i id="main_logo" class="fa-brands fa-spotify"></i>
+
+					</ul>
+				</nav>
+				<div class="title_main">
+					<div class="title2">Alan Walker - Faded</div>
+					<br>
+					<div class="title2_description">Alan Olav Walker (born 24 August 1997) is a British-born Norwegian
+						DJ. He
+						has also made several songs including "Sing Me to Sleep", "Alone", "Darkside", and "On My Way".
+					</div>
+					<div class="hero_buttons">
+						<button class="alan_fade" id="alan_faded">PLAY</button>
+						<button class="alan_fade" id="alan_faded2">FOLLOW</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div id="main_ssongss">
+			<div class="ps1">
+				<div class="ps_title">All Songs</div>
+				<div class="songs_main">
+
+					<div class="mains" id="mains_1">
+						<img width="150px" src="assets/images/image-1.jpg" alt="">
+						<div id="title_01">
+							<span class="song_name">It's Not So Bad</span>
+							<span class="singer">dybbukk</span>
+						</div>
+					</div>
+
+
+					<div class="mains" id="mains_2">
+						<img width="150px" src="assets/images/image-2.jpg" alt="">
+						<div id="title_01">
+							<span class="song_name">summer on my mind</span>
+							<span class="singer">tazzy</span>
+						</div>
+					</div>
+
+
+					<div class="mains" id="mains_3">
+						<img width="150px" src="assets/images/image-3.jpg" alt="">
+						<div id="title_01">
+							<span class="song_name">Je M'appelle</span>
+							<span class="singer">benzz</span>
+						</div>
+					</div>
+
+
+					<div class="mains" id="mains_4">
+						<img width="150px" src="assets/images/image-4.jpg" alt="">
+						<div id="title_01">
+							<span class="song_name">By The Sword</span>
+							<span class="singer">Jake Hill</span>
+						</div>
+					</div>
+
+
+					<div class="mains" id="mains_5">
+						<img width="150px" src="assets/images/image-5.jpg" alt="">
+						<div id="title_01">
+							<span class="song_name">Snake</span>
+							<span class="singer">Nathan Evans</span>
+						</div>
+					</div>
+
+					<div class="mains" id="mains_6">
+						<img width="150px" src="assets/images/image-6.jpg" alt="">
+						<div id="title_01">
+							<span class="song_name">Faded</span>
+							<span class="singer">Alan Walker</span>
+						</div>
+					</div>
+
+					<div class="mains" id="mains_7">
+						<img width="150px" src="assets/images/image-7.jpg" alt="">
+						<div id="title_01">
+							<span class="song_name">Elevated</span>
+							<span class="singer">Shubh</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+			<div class="ps2">
+				<div class="ps_title">Top Artists</div>
+				<div class="songs_main">
+
+					<div class="mains" id="mains_1">
+						<img width="150px" src="assets/images/artist-1.jpg" alt="">
+						<div id="title_01">
+							<!-- <span class="song_name">It's Not So Bad</span> -->
+							<span class="singer">SHUBH</span>
+						</div>
+					</div>
+
+
+					<div class="mains" id="mains_2">
+						<img width="150px" src="assets/images/artist-2.jpg" alt="">
+						<div id="title_01">
+							<!-- <span class="song_name">summer on my mind</span> -->
+							<span class="singer">ALAN WALKER</span>
+						</div>
+					</div>
+
+
+					<div class="mains" id="mains_3">
+						<img width="150px" src="assets/images/artist-3.jpg" alt="">
+						<div id="title_01">
+							<!-- <span class="song_name">Je M'appelle</span> -->
+							<span class="singer">SNOOP DOGG</span>
+						</div>
+					</div>
+
+
+					<div class="mains" id="mains_4">
+						<img width="150px" src="assets/images/artist-4.jpg" alt="">
+						<div id="title_01">
+							<!-- <span class="song_name">By The Sword</span> -->
+							<span class="singer">BENZZ</span>
+						</div>
+					</div>
+
+
+					<div class="mains" id="mains_5">
+						<img width="150px" src="assets/images/artist-5.jpg" alt="">
+						<div id="title_01">
+							<!-- <span class="song_name">Snake</span> -->
+							<span class="singer">NATHAN EVANS</span>
+						</div>
+					</div>
+
+					<div class="mains" id="mains_6">
+						<img width="150px" src="assets/images/artist-6.jpg" alt="">
+						<div id="title_01">
+							<!-- <span class="song_name">Faded</span> -->
+							<span class="singer">DRAKE</span>
+						</div>
+					</div>
+
+					<div class="mains" id="mains_7">
+						<img width="150px" src="assets/images/artist-7.jpg" alt="">
+						<div id="title_01">
+							<!-- <span class="song_name">Elevated</span> -->
+							<span class="singer">WEEKEND</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div id="audio_player">
+			<div id="audio_player_content">
+
+				<div class="main_uppers">
+					<div class="upper_player">
+						<div class="player_songs" id="song_1">
+							<i class="fas fa-music"></i>
+							<img width="40px" src="assets/images/image-1.jpg" alt="">
+							<div id="title">
+								<span class="song_name">It's Not So Bad</span>
+								<span id="singer">dybbukk</span>
+							</div>
+						</div>
+
+						<div id="player_controls">
+							<i id="prev" class="fa-solid fa-backward" onclick="prev()"></i>
+							<i id="pause" class="fa fa-pause" onclick="pause()"></i>
+							<i id="play" class="fa fa-play" onclick="play()"></i>
+							<i id="next" class="fa-solid fa-forward" onclick="next()"></i>
+						</div>
+					</div>
+
+					<div id="progress_song">
+						<div id="currentTime">00:00</div>
+						<input type="range" name="range" id="progress_bar" min="0" value="0" max="100"></input>
+						<div id="finalTime">00:00</div>
+					</div>
+				</div>
+
+				<div id="sound_song">
+					<i class="fas fa-volume-up"></i>
+					<input type="range" name="range" id="sound_bar" min="0" value="0" max="100"></input>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</body>
+<script src="assets/js/music_list.js"></script>
+<script src="assets/js/scripts.js"></script>
+
+</html>

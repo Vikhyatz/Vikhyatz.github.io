@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/60734bdbf3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="1_style.css">
+    <link rel="stylesheet" href="1_responsive.css">
+    <title>level 1</title>
+</head>
+
+<body>
+    <div id="main_game">
+        <div class="indicator" id="ind1">lava</div>
+        <div class="six_boxes">
+            <div class="box" id="b1"><img id="player" width="50px" src="../images/player.png" alt="player"></div>
+            <div class="box" id="b2"></div>
+            <div class="box" id="b3"></div>
+            <div class="box" id="b4"></div>
+            <div class="box" id="b5"></div>
+            <div class="box" id="b6"><img width="70px" id="winner" src="../images/winner.png" alt="winner"><img
+                    width="50px" id="key" src="../images/key.png" alt="key"></div>
+        </div>
+        <div class="indicator" id="ind2">lava</div>
+    </div>
+    <div id="gameOver">
+        <h1>Game Over</h1>
+        <button onclick="location.reload()">Restart</button>
+    </div>
+    <div id="controls">
+        <div class="instructions">
+            <h2>you can also use the arrow keys on your keyboard</h2>
+            <h2>otherwise, the controls are already given</h2>
+        </div>
+        <div class="buttons" id="up" onclick="up()">
+            <i class="fa fa-toggle-up"></i>
+        </div>
+        <div class="buttons" id="right" onclick="right()">
+            <i class="fa fa-toggle-right"></i>
+        </div>
+        <div class="buttons" id="left" onclick="left()">
+            <i class="fa fa-toggle-left"></i>
+        </div>
+        <div class="buttons" id="down" onclick="down()">
+            <i class="fa fa-toggle-down"></i>
+        </div>
+        <div class="instructions2">
+            <h2>help the player to get the key</h2>
+            <h2>without falling in the lava</h2>
+        </div>
+    </div>
+    <div id="Nextgame">
+        <h1>You Win</h1>
+        <a href="../level-2/level_2.html"><button>Next Level</button></a>
+    </div>
+</body>
+<script src="1_script.js"></script>
+
+</html>

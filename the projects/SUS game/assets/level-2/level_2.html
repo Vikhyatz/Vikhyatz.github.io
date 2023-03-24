@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/60734bdbf3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="2_style.css">
+    <link rel="stylesheet" href="2_respnsive.css">
+    <title>Level 2</title>
+</head>
+
+<body>
+    <div id="instructions">
+        <h4>Instructions:
+            <br>
+            <div class="inst1">
+                <div class="player"><img width="20px" src="../images/player.png"></div><i class="fa fa-arrow-right"></i>
+                player
+            </div>
+            <div class="inst2">
+                <div class="lava"></div><i class="fa fa-arrow-right"></i> lava
+            </div>
+            <div class="inst3">
+                <div class="key"><img width="20px" src="../images/key2.png"></div><i class="fa fa-arrow-right"></i>key
+            </div>
+        </h4>
+    </div>
+
+    <div id="main_game">
+        <div class="paths">
+
+            <div class="path1">
+                <div class="box" id="b1">
+                    <div id="player"><img id="main_player" width="25px" src="../images/player.png"></div>
+                </div>
+                <div class="box" id="b2"></div>
+                <div class="box" id="b3"></div>
+                <div class="box" id="b4"></div>
+            </div>
+            <div class="path2">
+                <div class="box" id="b5"></div>
+                <div class="box" id="b6"></div>
+            </div>
+            <div class="path3">
+                <div class="box" id="b7"></div>
+                <div class="box" id="b8"></div>
+            </div>
+            <div class="path4">
+                <div class="box" id="b9"></div>
+                <div class="box" id="b10"></div>
+            </div>
+            <div class="path5">
+                <div class="box" id="b11"></div>
+                <div class="box" id="b12"></div>
+                <div class="box" id="b13"></div>
+                <div class="box" id="b14"></div>
+            </div>
+            <div class="path6">
+                <div class="box" id="b15"></div>
+                <div class="box" id="b16"></div>
+            </div>
+            <div class="path7">
+                <div class="box" id="b17"></div>
+                <div class="box" id="b18"></div>
+            </div>
+            <div class="path8">
+                <div class="box" id="b19"></div>
+                <div class="box" id="b20"></div>
+                <div class="box" id="b21"></div>
+                <div class="box" id="b22"></div>
+            </div>
+            <div class="path9">
+                <div class="box" id="b23"></div>
+                <div class="box" id="b24"></div>
+                <div class="box" id="b25"></div>
+                <div class="box" id="b26"></div>
+            </div>
+            <div class="path10">
+                <div class="box" id="b27"></div>
+                <div class="box" id="b28"></div>
+            </div>
+            <div class="path11">
+                <div class="box" id="b29"></div>
+                <div class="box" id="b30"></div>
+                <div class="box" id="b31"></div>
+                <div class="box" id="b32"></div>
+            </div>
+            <div class="path12">
+                <div class="box" id="b33"></div>
+                <div class="box" id="b34"></div>
+            </div>
+            <div class="path13">
+                <div class="box" id="b35"></div>
+                <div class="box" id="b36"></div>
+            </div>
+            <div class="path14">
+                <div class="box" id="b37"></div>
+                <div class="box" id="b38"></div>
+            </div>
+            <div class="path15">
+                <div class="box" id="b39"></div>
+                <div class="box" id="b40"></div>
+            </div>
+            <div class="path16">
+                <div class="box" id="b41"></div>
+                <div class="box" id="b42"></div>
+            </div>
+            <div class="path17">
+                <div class="box" id="b43"></div>
+                <div class="box" id="b44"></div>
+            </div>
+            <div class="path18">
+                <div class="box" id="b45"></div>
+                <div class="box" id="b46"></div>
+            </div>
+            <div class="path19">
+                <div class="box" id="b47"></div>
+                <div class="box" id="b48"></div>
+                <div class="box" id="b49"></div>
+                <div class="box" id="b50"></div>
+            </div>
+            <div class="path20">
+                <div class="box" id="b51"></div>
+                <div class="box" id="b52"></div>
+                <div class="box" id="b53"></div>
+                <div class="box" id="b54"></div>
+                <div class="box" id="b55"></div>
+            </div>
+            <div class="path21">
+                <div class="box" id="b56"></div>
+                <div class="box" id="b57"></div>
+            </div>
+            <div class="path22">
+                <div class="box" id="b58"></div>
+                <div class="box" id="b59"></div>
+            </div>
+            <div class="path23">
+                <div class="box" id="b60"></div>
+                <div class="box" id="b61"></div>
+                <div class="box" id="b62"></div>
+                <div class="box" id="b63"></div>
+                <div class="box" id="b64"></div>
+                <div class="box" id="b65"></div>
+            </div>
+            <div class="path24">
+                <div class="box" id="b66"></div>
+                <div class="box" id="b67"></div>
+            </div>
+            <div class="path25">
+                <div class="box" id="b68"></div>
+                <div class="box" id="b69"></div>
+                <div class="box" id="b70"></div>
+                <div class="box" id="b71"></div>
+            </div>
+            <div class="path26">
+                <div class="box" id="b72"></div>
+                <div class="box" id="b73"></div>
+            </div>
+            <div class="path27">
+                <div class="box" id="b74"></div>
+                <div class="box" id="b75"></div>
+            </div>
+            <div class="path28">
+                <div class="box" id="b76"></div>
+                <div class="box" id="b77"></div>
+                <div class="box" id="b78"></div>
+                <div class="box" id="b79"></div>
+            </div>
+            <div class="path29">
+                <div class="box" id="b80"></div>
+                <div class="box" id="b81"></div>
+                <div class="box" id="b82"></div>
+                <div class="box" id="b83"></div>
+            </div>
+            <div class="path30">
+                <div class="box" id="b84"></div>
+                <div class="box" id="b85"></div>
+                <div class="box" id="b86"></div>
+                <div class="box" id="b87"></div>
+                <div class="box" id="b88"></div>
+                <div class="box" id="b89"></div>
+            </div>
+            <div class="path31">
+                <div class="box" id="b90"></div>
+                <div class="box" id="b91"></div>
+            </div>
+            <div class="path32">
+                <div class="box" id="b92"></div>
+                <div class="box" id="b93"></div>
+            </div>
+            <div class="path33">
+                <div class="box" id="b94"></div>
+                <div class="box" id="b95"></div>
+                <div class="box" id="b96"></div>
+                <div class="box" id="b97"></div>
+            </div>
+            <div class="path34">
+                <div class="box" id="b98"></div>
+                <div class="box" id="b99"></div>
+                <div class="box" id="b100"></div>
+                <div class="box" id="b101"></div>
+            </div>
+            <div class="path35">
+                <div class="box" id="b102"></div>
+                <div class="box" id="b103"></div>
+                <div class="box" id="b104"></div>
+                <div class="box" id="b105"></div>
+            </div>
+            <div class="path36">
+                <div class="box" id="b106"></div>
+                <div class="box" id="b107"></div>
+            </div>
+            <div class="path37">
+                <div class="box" id="b108"></div>
+                <div class="box" id="b109"></div>
+            </div>
+            <div class="path38">
+                <div class="box" id="b110"></div>
+                <div class="box" id="b111"></div>
+                <div class="box" id="b112"></div>
+                <div class="box" id="b113"></div>
+                <div class="box" id="b114"></div>
+                <div class="box" id="b115"></div>
+                <div class="box" id="b116"></div>
+                <div class="box" id="b117"></div>
+            </div>
+            <div class="path39">
+                <div class="box" id="b118"></div>
+                <div class="box" id="b119"></div>
+                <div class="box" id="b120"></div>
+                <div class="box" id="b121"></div>
+                <div class="box" id="b122"></div>
+                <div class="box" id="b123"></div>
+                <div class="box" id="b124"></div>
+            </div>
+            <div class="path40">
+                <div class="box" id="b125"></div>
+                <div class="box" id="b126"></div>
+            </div>
+            <div class="path41">
+                <div class="box" id="b127"></div>
+                <div class="box" id="b128"></div>
+            </div>
+            <div class="path42">
+                <div class="box" id="b129"></div>
+                <div class="box" id="b130"></div>
+            </div>
+            <div class="path43">
+                <div class="box" id="b131"></div>
+                <div class="box" id="b132"></div>
+            </div>
+            <div class="path44">
+                <div class="box" id="b133"></div>
+                <div class="box" id="b134"></div>
+            </div>
+            <div class="path45">
+                <div class="box" id="b135"></div>
+                <div class="box" id="b136"></div>
+            </div>
+            <div class="path46">
+                <div class="box" id="b137"></div>
+                <div class="box" id="b138"></div>
+                <div class="box" id="b139"></div>
+            </div>
+            <div class="path47">
+                <div class="box" id="b140"></div>
+                <div class="box" id="b141"></div>
+                <div class="box" id="b142"></div>
+                <div class="box" id="b143"></div>
+                <div class="box" id="b144"></div>
+            </div>
+            <div class="path48">
+                <div class="box" id="b145"></div>
+                <div class="box" id="b146"></div>
+            </div>
+            <div class="path49">
+                <div class="box" id="b147"></div>
+                <div class="box" id="b148"></div>
+                <div class="box" id="b149"></div>
+                <div class="box" id="b150"></div>
+            </div>
+            <div class="path50">
+                <div class="box" id="b151"></div>
+                <div class="box" id="b152"></div>
+                <div class="box" id="b153"></div>
+            </div>
+            <div class="path51">
+                <div class="box" id="b154"></div>
+                <div class="box" id="b155"></div>
+                <div class="box" id="b156"></div>
+                <div class="box" id="b157"></div>
+                <div class="box" id="b158"></div>
+            </div>
+            <div class="path52">
+                <div class="box" id="b159"></div>
+                <div class="box" id="b160"></div>
+            </div>
+            <div class="path53">
+                <div class="box" id="b161"></div>
+                <div class="box" id="b162"></div>
+                <div class="box" id="b163"></div>
+                <div class="box" id="b164"></div>
+                <div class="box" id="b165"></div>
+                <div class="box" id="b166"></div>
+            </div>
+            <div class="path54">
+                <div class="box" id="b167"></div>
+                <div class="box" id="b168"></div>
+                <div class="box" id="b169"></div>
+                <div class="box" id="b170"></div>
+                <div class="box" id="b171"></div>
+                <div class="box" id="b172"></div>
+            </div>
+            <div class="path55">
+                <div class="box" id="b173"></div>
+                <div class="box" id="b174"></div>
+            </div>
+            <div class="path56">
+                <div class="box" id="b175"></div>
+                <div class="box" id="b176"></div>
+                <div class="box" id="b177"></div>
+                <div class="box" id="b178"></div>
+            </div>
+            <div class="path57">
+                <div class="box" id="b179"></div>
+                <div class="box" id="b180"></div>
+            </div>
+            <div class="path58">
+                <div class="box" id="b181"></div>
+                <div class="box" id="b182"></div>
+                <div class="box" id="b183"></div>
+                <div class="box" id="b184"></div>
+            </div>
+            <div class="path59">
+                <div class="box" id="b185"></div>
+                <div class="box" id="b186"></div>
+            </div>
+            <div class="path60">
+                <div class="box" id="b187"></div>
+                <div class="box" id="b188"></div>
+                <div class="box" id="b189"></div>
+            </div>
+            <div class="path61">
+                <div class="box" id="b190"></div>
+                <div class="box" id="b191"></div>
+                <div class="box" id="b192"></div>
+                <div class="box" id="b193"></div>
+                <div class="box" id="b194"></div>
+            </div>
+            <div class="path62">
+                <div class="box" id="b195"></div>
+                <div class="box" id="b196"></div>
+            </div>
+            <div class="path63">
+                <div class="box" id="b197"></div>
+                <div class="box" id="b198"></div>
+                <div class="box" id="b199"></div>
+                <div class="box" id="b200"></div>
+            </div>
+            <div class="path64">
+                <div class="box" id="b201"></div>
+                <div class="box" id="b202"></div>
+                <div class="box" id="b203"><img id="key" width="25px" src="../images/key.png"><img width="30px" id="winner"
+                        src="../images/winner.png" alt="winner"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gameOver">
+        <h1>Game Over</h1>
+        <button onclick="location.reload()">Restart</button>
+    </div>
+
+    <div id="controls">
+        <div class="instructions">
+            <h2>you can also use the arrow keys on your keyboard</h2>
+            <h2>otherwise, the controls are already given</h2>
+        </div>
+        <div class="buttons" id="up" onclick="up()">
+            <i class="fa fa-toggle-up"></i>
+        </div>
+        <div class="buttons" id="right" onclick="right()">
+            <i class="fa fa-toggle-right"></i>
+        </div>
+        <div class="buttons" id="left" onclick="left()">
+            <i class="fa fa-toggle-left"></i>
+        </div>
+        <div class="buttons" id="down" onclick="down()">
+            <i class="fa fa-toggle-down"></i>
+        </div>
+        <div class="instructions2">
+            <h2>help the player(SUS) to get the key</h2>
+            <h2>without falling in the lava</h2>
+        </div>
+    </div>
+
+    <div id="Nextgame">
+        <h1>You Win</h1>
+        <a href="level_1.html"><button>Replay</button></a>
+    </div>
+
+</body>
+<script src="2_script.js"></script>
+
+</html>

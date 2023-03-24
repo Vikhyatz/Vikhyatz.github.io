@@ -1,0 +1,110 @@
+@media only screen and (max-width: 910px) {
+    #btnStart{
+        margin-left: 55px;
+        margin-top: 0;
+    }
+    #resp1{
+        flex-direction: column;
+    }
+    #mainTimer{
+        width: 290px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    body{
+        flex-direction: column-reverse;
+    }
+    #displayContent{
+        height: 460px;
+    }
+    #content{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #displayContent{
+        height: 65vh;
+        width: 95vw;
+    }
+    #inputContent{
+        height: 225px;
+        width: 80vw;
+    }
+	#inpContent{
+		height: 225px;
+        width: 75vw;
+	}
+    #resp1{
+        flex-direction: row;
+    }
+    #timer{
+        font-size: 50px;
+    }
+    #btnStart{
+        margin-left: 0;
+    }
+    #timerHead{
+        margin-bottom: 0;
+    }
+    #mainTimer{
+        height: 180px;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #content{
+        font-size: 20px;
+        width: 80vw;
+    }
+	#inpContent{
+		font-size: 20px;
+	}
+    body{
+        transform: scale(0.9);
+		overflow: hidden;
+		position: relative;
+    }
+	html{
+		transform: scale(1.0001);
+/* 		width: 102vw; */
+/* 		height: 100vh; */
+		overflow: hidden;
+	}
+	#btnStart{
+		margin-top: 20px;
+		width: 150px;
+		height: 100px;
+    }
+	#resp1{
+		margin-bottom: 50px;
+	}
+	#mainContainer{
+		margin-bottom: 40px;
+	}
+	#countdownContent{
+		left: 10%;
+	}
+	#countdownTimer{
+		font-size: 30px;
+		width: 130vw;
+		height: 100vh;
+	}
+	#displayContent{
+		height:  430px;
+	}
+/* 	#resp3{
+		display: flex;
+		flex-direction: column;
+	} */
+	#results{
+		font-size: 20px;
+		text-align: center;
+	}
+	#accuracydiv{
+		margin-top: 40px;
+		margin-left: 0;
+	}
+}

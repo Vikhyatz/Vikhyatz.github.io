@@ -1,0 +1,735 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+#instructions {
+    color: white;
+    padding: 10px;
+    /* margin-left: 50px; */
+}
+
+.inst1 i {
+    margin-top: 5px;
+}
+
+.inst2 i {
+    margin-top: 5px;
+}
+
+.inst3 i {
+    margin-top: 5px;
+}
+
+.inst1 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.lava {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(red, #e8630d);
+}
+
+.inst2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.inst3 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* main game */
+#main_game {
+    width: 588px;
+    height: 588px;
+    background: linear-gradient(red, #e8630d);
+    position: relative;
+    border-radius: 10px;
+    visibility: visible;
+    /* margin-left: 250px; */
+}
+
+/* controls */
+
+
+.buttons {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    /* top: 40%;
+    right: 20%; */
+    /* background-color: wheat; */
+
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#controls {
+    margin-left: 10em;
+    /* margin-top: 3em; */
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.instructions2 {
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+    height: 100px;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.instructions {
+    position: absolute;
+    top: 30px;
+    width: 600px;
+    height: 100px;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.buttons i {
+    font-size: 60px;
+    color: #f5deb3;
+
+}
+
+.buttons i:hover {
+    color: #8d7751;
+}
+
+#down {
+    margin-top: 120px;
+}
+
+#right {
+    margin-left: 120px;
+}
+
+#up {
+    margin-bottom: 120px;
+}
+
+#left {
+    margin-right: 120px;
+}
+
+/* controls */
+
+
+#main_player {
+    /* margin-top: 3px; */
+    position: absolute;
+    /* margin-bottom: 30px; */
+    bottom: 2px;
+    right: 85px;
+    z-index: 1000;
+    /* left: 534px;
+    top: -503px; */
+}
+
+#key {
+    transform: rotate(45deg);
+}
+
+#winner {
+    position: absolute;
+    display: none;
+}
+
+/* results  */
+
+#gameOver {
+    position: absolute;
+    color: white;
+    text-align: center;
+    background: linear-gradient(#e8630d, red);
+    border-radius: 10px;
+    margin-top: 12em;
+    margin-left: 20em;
+    width: 300px;
+    height: 200px;
+    visibility: hidden;
+}
+
+#gameOver button {
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: 0;
+}
+
+#Nextgame {
+    position: absolute;
+    right: 8%;
+    top: 35%;
+    text-align: center;
+    color: white;
+    background-color: green;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+#Nextgame button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+}
+
+/* results  */
+
+
+
+.paths {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+}
+
+.box {
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 2px; */
+    /* outline: 1px solid black; */
+    /* border: 1px solid black; */
+}
+
+.path1 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 28px;
+}
+
+.path2 {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 56px;
+    margin-left: 84px;
+}
+
+.path3 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 28px;
+    margin-bottom: 84px;
+}
+
+.path4 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 28px;
+    margin-bottom: 112px;
+}
+
+.path5 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 56px;
+    margin-bottom: 140px;
+}
+
+.path6 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 84px;
+    margin-bottom: 168px;
+}
+
+.path7 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 28px;
+    margin-bottom: 196px;
+}
+
+.path8 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 28px;
+    margin-bottom: 224px;
+}
+
+.path9 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 56px;
+    margin-bottom: 308px;
+}
+
+.path10 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 140px;
+    margin-bottom: 336px;
+}
+
+.path11 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 140px;
+    margin-bottom: 196px;
+}
+
+.path12 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 84px;
+    margin-bottom: 252px;
+}
+
+.path13 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 168px;
+    margin-bottom: 196px;
+}
+
+.path14 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 196px;
+    margin-bottom: 224px;
+}
+
+.path15 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 224px;
+    margin-bottom: 252px;
+}
+
+.path16 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 252px;
+    margin-bottom: 196px;
+}
+
+.path17 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 280px;
+    margin-bottom: 196px;
+}
+
+.path18 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 308px;
+    margin-bottom: 140px;
+}
+
+.path19 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 196px;
+    margin-bottom: 140px;
+}
+
+.path20 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 196px;
+    margin-bottom: 28px;
+}
+
+.path21 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 140px;
+    margin-bottom: 84px;
+}
+
+.path22 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 140px;
+    margin-bottom: 28px;
+}
+
+.path23 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 224px;
+    margin-bottom: 28px;
+}
+
+.path24 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 252px;
+    margin-bottom: 56px;
+}
+
+.path25 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 280px;
+    margin-bottom: 84px;
+}
+
+.path26 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 364px;
+    margin-bottom: 112px;
+}
+
+.path27 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 392px;
+    margin-bottom: 140px;
+}
+
+.path28 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 420px;
+    margin-bottom: 28px;
+}
+
+.path29 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 448px;
+    margin-bottom: 28px;
+}
+
+.path30 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 476px;
+    margin-bottom: 56px;
+}
+
+.path31 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 532px;
+    margin-bottom: 56px;
+}
+
+.path32 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 504px;
+    margin-bottom: 140px;
+}
+
+.path33 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 532px;
+    margin-bottom: 168px;
+}
+
+.path34 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 364px;
+    margin-bottom: 196px;
+}
+
+.path35 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 364px;
+    margin-bottom: 224px;
+}
+
+.path36 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 392px;
+    margin-bottom: 308px;
+}
+
+.path37 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 420px;
+    margin-bottom: 336px;
+}
+
+.path38 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 308px;
+    margin-bottom: 364px;
+}
+
+.path39 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 532px;
+    margin-bottom: 308px;
+}
+
+.path40 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 476px;
+    margin-bottom: 308px;
+}
+
+.path41 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 476px;
+    margin-bottom: 252px;
+}
+
+.path42 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 420px;
+    margin-bottom: 252px;
+}
+
+.path43 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 364px;
+    margin-bottom: 392px;
+}
+
+.path44 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 308px;
+    margin-bottom: 392px;
+}
+
+.path45 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 252px;
+    margin-bottom: 420px;
+}
+
+.path46 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 252px;
+    margin-bottom: 336px;
+}
+
+.path47 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 196px;
+    margin-bottom: 308px;
+}
+
+.path48 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 308px;
+    margin-bottom: 252px;
+}
+
+.path49 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 196px;
+    margin-bottom: 336px;
+}
+
+.path50 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 112px;
+    margin-bottom: 420px;
+}
+
+.path51 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 84px;
+    margin-bottom: 364px;
+}
+
+.path52 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 28px;
+    margin-bottom: 364px;
+}
+
+.path53 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 28px;
+    margin-bottom: 392px;
+}
+
+.path54 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 56px;
+    margin-bottom: 532px;
+}
+
+.path55 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 140px;
+    margin-bottom: 476px;
+}
+
+.path56 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 168px;
+    margin-bottom: 476px;
+}
+
+.path57 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 252px;
+    margin-bottom: 504px;
+}
+
+.path58 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 280px;
+    margin-bottom: 532px;
+}
+
+.path59 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 308px;
+    margin-bottom: 476px;
+}
+
+.path60 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 336px;
+    margin-bottom: 476px;
+}
+
+.path61 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 420px;
+    margin-bottom: 420px;
+}
+
+.path62 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 448px;
+    margin-bottom: 420px;
+}
+
+.path63 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 476px;
+    margin-bottom: 448px;
+}
+
+.path64 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    margin-left: 504px;
+    margin-bottom: 532px;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password generator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            /* font-family: consolas; */
+            font-family: 'Nunito', sans-serif;
+            font-size: 30px;
+            color: white;
+        }
+        body{
+            background: linear-gradient(90deg, #8E2DE2, #4A00E0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        #btn{
+            background-color: #333;
+            padding: 30px;
+            /* border: 2px solid white; */
+            border: 0;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+        #btn:hover{
+            background-color: green;
+        }
+        #mainContainer{
+            text-align: center;
+        }
+        #result{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainContainer">
+        <h2>Generate Password</h2>
+        <button id="btn">Generate</button>
+        <div id="result"></div>
+    </div>
+</body>
+<script>
+
+    let btn = document.getElementById('btn')
+    let roos = document.getElementById('result')
+
+    
+    console.log('vikhyat' + 'gupta')
+    
+btn.addEventListener('click', ()=>{
+
+
+const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+function generateString(length) {
+    let result = '';
+    const charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+
+    return result;
+}
+
+const char = '!@#$%&'
+function generateSpecialChar(length) {
+    let result1 = '';
+    const charactersLength1 = char.length;
+    for ( let i = 0; i < length; i++ ) {
+        result1 += char.charAt(Math.floor(Math.random() * charactersLength1));
+    }
+
+    return result1;
+}
+
+function generateNumber() {
+    let no = Math.floor(Math.random() * 10);
+    return no;
+}
+
+
+// console.log(generateString(10));
+let full = (generateString(4) + generateSpecialChar(1) + generateNumber() + generateString(3) + generateSpecialChar(1));
+    roos.innerHTML = full
+
+
+})
+
+
+
+
+
+</script>
+</html>

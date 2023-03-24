@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/responsive.css">
+	<title>Typing Speed Test</title>
+</head>
+
+<body>
+	<!-- INPUT AND MAIN TEST -->
+	<div id="mainContainer">
+		<div id="displayContent">
+
+			<div id="content">
+				quote
+			</div>
+
+			<div id="inputContent">
+				<textarea type="text" id="inpContent"></textarea>
+			</div>
+		</div>
+	</div>
+	<!-- RESPONSIVE 1 -->
+	<div id="resp1">
+
+		<!-- TIMER -->
+		<div id="mainTimer">
+			<h3 id="timerHead">Timer</h3>
+			<div id="timer">00</div>
+		</div>
+		<!-- BUTTON -->
+		<div id="startTest">
+			<button id="btnStart">start</button>
+		</div>
+
+	</div>
+	<!-- COUNTDOWN TIMER -->
+	<div id="countdownTimer">
+		<div id="countdownContent">
+			<h2 id="countdownTimeHead">Get Ready!!!</h2>
+			<h1 id="countdownTimeDisplay"></h1>
+		</div>
+	</div>
+
+
+	<!-- RESULTS AFTER THE TEST -->
+	<div id="results">
+		<div id="wpmdiv">
+			<h2>Words Per Minute</h2>
+			<h3 id="wpm"></h3>
+		</div>
+		<div id="accuracydiv">
+			<h2>Accuracy</h2>
+			<h3 id="accuracy"></h3>
+		</div>
+	</div>
+
+</body>
+<script src="assets/script.js"></script>
+
+</html>
