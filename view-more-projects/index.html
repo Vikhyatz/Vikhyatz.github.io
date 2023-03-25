@@ -197,6 +197,153 @@
         a {
             color: white;
         }
+
+        footer {
+            color: lime;
+            font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+            height: 50px;
+            /* margin-bottom: 20px; */
+            margin-top: 100px;
+        }
+        
+        .footer-social-elements {
+            transition: 0.2s;
+        }
+
+        .footer-social-elements:hover {
+            transform: translate(0, -3px);
+        }
+
+        .footer-socials {
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .footer-socials a {
+            color: lime;
+        }
+
+        @media only screen and (max-width: 400px) {
+            #Projects {
+                /* justify-content: center; */
+                height: calc(4000px - 120vh);
+                border-radius: 0;
+
+            }
+
+            .project-box {
+                width: 80vw;
+            }
+
+            .img {
+                width: 90vw;
+                height: 399px;
+                right: -20px;
+                overflow: hidden;
+                border-radius: 2px;
+                box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.205);
+                opacity: 0.7;
+                border: 0.5px solid #035a503f;
+            }
+
+            .img-inverse {
+                width: 90vw;
+                height: 399px;
+                left: -20px;
+                overflow: hidden;
+                border-radius: 2px;
+                box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.205);
+                opacity: 0.7;
+                border: 0.5px solid #035a503f;
+            }
+
+            .img img,
+            .img-shadow {
+                width: 700px;
+                height: 400px;
+                left: -100px;
+            }
+
+            .img-inverse img {
+                width: 700px;
+                height: 400px;
+                right: -100px;
+            }
+
+            .img-shadow {
+                background-color: #06152cb0;
+            }
+
+            .pro-description {
+                left: 0;
+                width: 80vw;
+            }
+
+            .pro-description-inverse {
+                left: 0;
+                text-align: left;
+                width: 80vw;
+            }
+
+            .pro-description span,
+            .pro-description h1,
+            .prolinks {
+                margin-left: 0;
+                width: fit-content;
+            }
+
+            .prolinks-inverse {
+                position: static;
+            }
+
+            .pro-description span,
+            .pro-description-inverse span {
+                font-size: 15px;
+            }
+
+            .pro-description h1,
+            .pro-description-inverse h1 {
+                font-size: 25px;
+                color: #00fde0;
+            }
+
+            .probox {
+                background-color: transparent;
+                box-shadow: 0 0 0 0;
+                width: 90%;
+                margin-top: 10px;
+                color: #adb5c2;
+                font-size: 20px;
+                text-align: left;
+            }
+
+            .prolinks i,
+            .prolinks-inverse i {
+                margin-top: 10px;
+            }
+
+            s {
+                color: #00fde0;
+                text-decoration: none;
+            }
+
+            .img:hover .img-shadow {
+                background-color: #0a192fbd;
+            }
+
+            #Projects h2:nth-child(1) {
+                margin-top: 50px;
+            }
+        }
     </style>
 </head>
 
@@ -205,7 +352,7 @@
         <h2 data-aos="fade-up">~# ls/Projects</h2>
         <div class="some-projects">
 
-            <div class="project-box-aos" data-aos="fade-right">
+            <div class="project-box-aos" data-aos="fade-up">
 
                 <div class="project-box">
                     <div class="img">
@@ -231,7 +378,7 @@
 
             </div>
 
-            <div class="project-box-aos" data-aos="fade-left">
+            <div class="project-box-aos" data-aos="fade-up">
 
                 <div class="project-box">
                     <div class="img-inverse">
@@ -257,7 +404,7 @@
 
             </div>
 
-            <div class="project-box-aos" data-aos="fade-right">
+            <div class="project-box-aos" data-aos="fade-up">
 
                 <div class="project-box">
                     <div class="img">
@@ -283,7 +430,7 @@
 
             </div>
 
-            <div class="project-box-aos" data-aos="fade-left">
+            <div class="project-box-aos" data-aos="fade-up">
 
                 <div class="project-box">
                     <div class="img-inverse">
@@ -310,7 +457,7 @@
 
             </div>
 
-            <div class="project-box-aos" data-aos="fade-right">
+            <div class="project-box-aos" data-aos="fade-up">
 
                 <div class="project-box">
                     <div class="img">
@@ -336,7 +483,7 @@
 
             </div>
 
-            <div class="project-box-aos" data-aos="fade-left">
+            <div class="project-box-aos" data-aos="fade-up">
 
                 <div class="project-box">
                     <div class="img-inverse">
@@ -362,7 +509,7 @@
 
             </div>
 
-            <div class="project-box-aos" data-aos="fade-right">
+            <div class="project-box-aos" data-aos="fade-up">
 
                 <div class="project-box">
                     <div class="img">
@@ -387,6 +534,26 @@
                 </div>
 
             </div>
+            <footer>
+                <div>
+                    <span>Designed and built by Vikhyat Gupta</span>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/Vikhyatz">
+                        <i class="footer-social-elements" data-feather="github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/zzv.356/">
+                        <i class="footer-social-elements" data-feather="instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/vikhyat88994297">
+                        <i class="footer-social-elements" data-feather="twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vikhyat-gupta-933450246/">
+                        <i class="footer-social-elements" data-feather="linkedin"></i>
+                    </a>
+                </div>
+
+            </footer>
 </body>
 <!-- AOS -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
