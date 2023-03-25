@@ -113,12 +113,12 @@
         /* margin-top: 100px; */
     }
 	#Projects h2{
-/* 		margin-bottom: 800px; */
-		transform: translate(0, -450px);
+		position: relative;
+		bottom: 450px;
 	}
 	.some-projects{
-/* 		margin-top: -500px; */
-		transform: translate(0, -400px);
+		position: relative;
+		bottom: 400px;
 	}
     .img{
         width: 90vw;
