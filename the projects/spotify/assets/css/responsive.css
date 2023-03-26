@@ -150,7 +150,6 @@
 	body{
 		transform: scale(0.7);
 		margin-right: 280px;
-/* 		margin-bottom: 200px; */
 	}
 	#hero_content{
 		margin-top: -150px;
@@ -161,7 +160,5 @@
 	}
 	#playlist{
 		margin-top: -180px;
-		height: 130vh;
-		overflow: hidden;
 	}
 }
