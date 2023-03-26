@@ -1,0 +1,151 @@
+/* song properties and shit */
+
+
+#song_1 {
+    display: flex;
+    align-items: center;
+}
+
+.player_songs {
+    display: flex;
+    align-items: center;
+}
+
+#song_1 i {
+    color: white;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+
+#audio_player_content {
+    margin-top: 13px;
+    display: flex;
+}
+
+#song_name {
+    color: white;
+}
+
+#singer {
+    font-size: 11px;
+    color: grey;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    margin-left: 10px;
+    width: 170px;
+}
+
+#player_controls {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+#player_controls i {
+    margin-left: 30px;
+    font-size: 20px;
+    margin-top: 10px;
+    user-select: none;
+}
+
+#currentTime,
+#finalTime {
+    font-size: 12px;
+    color: grey;
+    margin-top: 9px;
+}
+
+#currentTime {
+    margin-right: 20px;
+    margin-left: 100px;
+}
+
+#finalTime {
+    margin-left: 20px;
+}
+
+#progress_bar {
+    width: 400px;
+    height: 4px;
+    margin-top: 15px;
+}
+
+#progress_song {
+    display: flex;
+}
+
+#sound_song {
+    display: flex;
+    margin-left: 80px;
+}
+
+#sound_song i {
+    margin-top: 10px;
+}
+
+#sound_bar {
+    width: 130px;
+    height: 5px;
+    background-color: grey;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+#pause {
+    position: absolute;
+    left: 50px;
+    visibility: hidden;
+}
+
+#hero_headings {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+#for_responsive {
+    display: flex;
+    flex-direction: row;
+}
+
+.hero_buttons {
+    width: 488px;
+}
+
+.title2 {
+    width: 406px;
+}
+
+.main_uppers {
+    display: flex;
+    flex-direction: row;
+}
+
+.upper_player {
+    display: flex;
+    flex-direction: row;
+}
+
+#hamburger_menu {
+    display: none;
+    margin: 30px;
+    height: 25px;
+    font-size: 30px;
+}
+
+#crsoo {
+    position: absolute;
+    right: 0;
+    margin-bottom: 20px;
+    transform: scale(2);
+    display: none;
+    z-index: 1111111111111;
+}
+.full_titole nav{
+    position: fixed, relative;
+}
