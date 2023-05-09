@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/60734bdbf3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+
+    <!-- <main> -->
+        <div class="navbar">
+            <div class="logo">
+                <img src="assets/images/crossLogo.svg" alt="" width="40px">
+                <img src="assets/images/circleLogo.svg" alt="" width="40px">
+            </div>
+            <button id="reloadBtn" onclick="location.reload()"><i id="currentid" class="fa-solid fa-rotate-right"></i></button>
+        </div>
+
+        <div class="main-container" id="main-container">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+            <div class="box" id="box5"></div>
+            <div class="box" id="box6"></div>
+            <div class="box" id="box7"></div>
+            <div class="box" id="box8"></div>
+            <div class="box" id="box9"></div>
+        </div>
+
+        <!-- <div class="resultSetup"> -->
+        <div id="resultWindow">
+                <h2>WINNER!!</h2>
+                <div>
+                    <div id="showPlayer"></div>
+                    <div id="results"> TAKES THE ROUND</div>
+                </div>
+                <button id="btn" onclick="replay()">REPLAY</button>
+            </div>
+        <!-- </div> -->
+            
+        <div id="score-board">
+            <div class="sb-div">
+
+                <div id="scoreBoardHeaderPlayer1" class="scoreHeaders">
+                    <span>X(PLAYER 1)</span>
+                    <span id="x-score" class="scores">0</span>
+                </div>
+
+                <div id="scoreBoardHeaderPlayer3" class="scoreHeaders">
+                    <span>TIES</span>
+                    <span id="draws" class="scores">0</span>
+                </div>
+
+                <div id="scoreBoardHeaderPlayer2" class="scoreHeaders">
+                    <span>O(PLAYER 2)</span>
+                    <span id="o-score" class="scores">0</span>
+                </div>
+            </div>
+        </div>
+
+    <!-- </main> -->
+
+</body>
+<script src="assets/JS/app.js"></script>
+
+</html>

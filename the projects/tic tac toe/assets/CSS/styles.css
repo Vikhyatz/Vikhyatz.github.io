@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: #1A2A33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: scale(0.9);
+    overflow: hidden;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 420px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#reloadBtn {
+    color: #A8BFC9;
+    width: 140px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0 6px 0 0 #10212A;
+    background-color: #1F3641;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 30px;
+    border: 0;
+}
+
+
+.main-container {
+    width: 410px;
+    height: 410px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 20px;
+    column-gap: 20px;
+    margin-top: 20px;
+}
+
+.box {
+    width: 125px;
+    height: 125px;
+    background-color: #1F3641;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+    box-shadow: 0 6px 0 0 #10212A;
+    transition: 0.5s;
+}
+
+
+#results {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#resultWindow {
+    width: 120vw;
+
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+
+    left: -10vw;
+    transform: scale(0);
+    background-color: #0c1418;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFD469;
+}
+
+#resultWindow h2 {
+    margin-top: 30px;
+    color: #A8BFC9;
+}
+
+#showPlayer {
+    font-size: 60px;
+    height: 90px;
+}
+
+#results {
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+#resultWindow div {
+    color: #F2B137;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn {
+    padding: 10px;
+    padding-inline: 40px;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    background-color: #F2B137;
+    margin-top: 15px;
+    color: #2B3536;
+    font-weight: 900;
+    font-size: 20px;
+    box-shadow: 0 6px 0 0 #CC8B13;
+}
+
+#btn:hover {
+    background-color: #FFC860;
+}
+
+#score-board {
+    width: 410px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+
+}
+
+.sb-div {
+    display: flex;
+    gap: 17px;
+    margin-left: 2px;
+}
+
+.scoreHeaders {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 125px;
+    background-color: red;
+    height: 70px;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+.scoreHeaders span:nth-child(2) {
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.scoreHeaders span:nth-child(1) {
+    margin-top: 10px;
+}
+
+#scoreBoardHeaderPlayer1 {
+    background-color: #F2B137;
+}
+
+#scoreBoardHeaderPlayer3 {
+    background-color: #A8BFC9;
+}
+
+#scoreBoardHeaderPlayer2 {
+    background-color: #31C3BD;
+}
+
+.cross {
+    color: #F2B137;
+}
+
+.circle {
+    color: #31C3BD;
+}
+
+
+
+
+
+@media only screen and (max-width: 400px){
+    body{
+        transform: scale(0.8);
+    }
+}
+@media only screen and (max-width: 375px){
+    .navbar{
+        width: 300px;
+    }
+    .main-container{
+        width:  300px;
+        height: 300px;
+        margin-right: 20px;
+    }
+    .box {
+        width:  100px;
+        height: 100px;
+        row-gap: 0;
+        column-gap: 0;
+    }
+    #score-board{
+        transform: scale(0.8);
+
+    }
+}

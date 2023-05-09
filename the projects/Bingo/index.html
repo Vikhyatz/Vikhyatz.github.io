@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <title>Bingo!</title>
+</head>
+
+<body>
+    <audio id="myAudio">
+        <source src="assets/audio/beep.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <button id="remakeBtn" class="remakeBtn">remake grid</button>
+
+    <div id="main-container">
+        <div class="cells" id="r1c1"></div>
+        <div class="cells" id="r1c2"></div>
+        <div class="cells" id="r1c3"></div>
+        <div class="cells" id="r1c4"></div>
+        <div class="cells" id="r1c5"></div>
+        <div class="cells" id="r2c1"></div>
+        <div class="cells" id="r2c2"></div>
+        <div class="cells" id="r2c3"></div>
+        <div class="cells" id="r2c4"></div>
+        <div class="cells" id="r2c5"></div>
+        <div class="cells" id="r3c1"></div>
+        <div class="cells" id="r3c2"></div>
+        <div class="cells" id="r3c3"></div>
+        <div class="cells" id="r3c4"></div>
+        <div class="cells" id="r3c5"></div>
+        <div class="cells" id="r4c1"></div>
+        <div class="cells" id="r4c2"></div>
+        <div class="cells" id="r4c3"></div>
+        <div class="cells" id="r4c4"></div>
+        <div class="cells" id="r4c5"></div>
+        <div class="cells" id="r5c1"></div>
+        <div class="cells" id="r5c2"></div>
+        <div class="cells" id="r5c3"></div>
+        <div class="cells" id="r5c4"></div>
+        <div class="cells" id="r5c5"></div>
+    </div>
+    <div class="bingo">
+        <div id="b">B</div>
+        <div id="i">I</div>
+        <div id="n">N</div>
+        <div id="g">G</div>
+        <div id="o">O</div>
+    </div>
+    <div id="resultpopup">
+        YOU WIN!!?
+        <button id="checkNumbers">OK!</button>
+        <button onclick="location.reload()">REPLAY</button>
+    </div>
+</body>
+<script src="assets/JS/app.js"></script>
+
+</html>
