@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playwrite IN", serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    font-family: 'Arial', sans-serif;
+    color: black;
+    overflow: hidden;
+}
+
+button{
+    z-index: 100;
+}
+
+video{
+    z-index: -1;
+    margin-top: 100px;
+    mix-blend-mode: multiply;
+}
+
+.phone {
+    display: none;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ff5e5e;
+    margin-bottom: 50px;
+    animation: fadeIn 1s ease-in-out;
+    user-select: none;
+}
+
+h2{
+    color: white;
+    margin-bottom: 50px;
+    animation: fadeIn 1s ease-in-out;
+    user-select: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    /* background-color: #00b0ff; */
+    background-color: #ff5e5e;
+    border: 4px solid #ff0000;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #ff9797;
+}
+
+#popup {
+    width: 250px;
+    height: 250px;
+    background-color: #ff0;
+    color: #ff5e5e;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+/* New Animation for pushing the 'No' button out of the screen */
+@keyframes moveOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw); /* Move off the screen to the right */
+    }
+}
+
+.no-move-out {
+    animation: moveOut 1.5s forwards; /* Apply the moveOut animation */
+}
+
+.final-container {
+    display: none; /* Hidden initially */
+    text-align: center;
+    color: transparent;
+    height: 500px;
+    width: 500px;
+    padding: 50px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    position: absolute;
+    filter : brightness(0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px; /* Adjust size of the images as needed */
+    height: auto;
+    opacity: 0;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    border-radius: 10px;
+}
+.caption{
+    position: absolute;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+/* New animation for images */
+.caption1{
+    animation-name: slideFromTop;
+    animation-delay: 0s;
+}
+.caption2 {
+    animation-name: slideFromLeft;
+    animation-delay: 5s;
+}
+
+.caption4 {
+    animation-name: slideFromRight;
+    animation-delay: 15s;
+}
+
+.caption8 {
+    animation-name: slideFromRight;
+    animation-delay: 35s;
+}
+
+.image1 {
+    animation-name: slideFromTop;
+    animation-delay: 0s;
+}
+
+.image2 {
+    animation-name: slideFromLeft;
+    animation-delay: 5s;
+}
+
+.image3 {
+    animation-name: slideFromBottom;
+    animation-delay: 10s;
+}
+
+.image4 {
+    animation-name: slideFromRight;
+    animation-delay: 15s;
+}
+
+.image5 {
+    animation-name: slideFromTop;
+    animation-delay: 20s;
+}
+
+.image6 {
+    animation-name: slideFromLeft;
+    animation-delay: 25s;
+}
+
+.image7 {
+    animation-name: slideFromBottom;
+    animation-delay: 30s;
+}
+
+.image8 {
+    animation-name: slideFromRight;
+    animation-delay: 35s;
+}
+
+
+.image9 {
+    animation-name: slideFromTop;
+    animation-delay: 40s;
+}
+
+.image10 {
+    animation-name: slideFromLeft;
+    animation-delay: 45s;
+}
+
+.image11 {
+    animation-name: slideFromBottom;
+    animation-delay: 50s;
+}
+
+.image12 {
+    animation-name: slideFromRight;
+    animation-delay: 55s;
+}
+
+.image13 {
+    animation-name: slideFromTop;
+    animation-delay: 60s;
+}
+
+.image14 {
+    animation-name: slideFromLeft;
+    animation-delay: 65s;
+}
+
+.image15 {
+    animation-name: slideFromBottom;
+    animation-delay: 70s;
+}
+.caption15{
+    animation-name: slideFromBottom;
+    animation-delay: 70s;
+}
+
+.image16 {
+    animation-name: slideFromRight;
+    animation-delay: 75s;
+}
+
+.image17 {
+    animation-name: slideFromTop;
+    animation-delay: 80s;
+}
+
+.image18 {
+    animation-name: slideFromLeft;
+    animation-delay: 85s;
+}
+
+.image19 {
+    animation-name: slideFromBottom;
+    animation-delay: 90s;
+}
+
+.image20 {
+    animation-name: slideFromRight;
+    animation-delay: 95s;
+}
+
+.image21 {
+    animation-name: slideFromTop;
+    animation-delay: 100s;
+}
+
+.image22 {
+    animation-name: slideFromLeft;
+    animation-delay: 105s;
+}
+
+.image23 {
+    animation-name: slideFromBottom;
+    animation-delay: 110s;
+}
+
+.image24 {
+    animation-name: slideFromRight;
+    animation-delay: 115s;
+}
+
+.image25 {
+    animation-name: slideFromTop;
+    animation-delay: 120s;
+}
+
+.image26 {
+    animation-name: slideFromLeft;
+    animation-delay: 125s;
+}
+
+.image27 {
+    animation-name: slideFromBottom;
+    animation-delay: 130s;
+}
+
+.image28 {
+    animation-name: slideFromRight;
+    animation-delay: 135s;
+}
+
+.image29 {
+    animation-name: slideFromTop;
+    animation-delay: 140s;
+}
+
+.image30 {
+    animation-name: slideFromLeft;
+    animation-delay: 145s;
+}
+.caption30{
+    animation-name: slideFromLeft;
+    animation-delay: 145s;
+}
+
+.image31 {
+    animation-name: slideFromBottom;
+    animation-delay: 150s;
+}
+.image32 {
+    animation-name: slideFromRight;
+    animation-delay: 155s;
+}
+.image33 {
+    animation-name: slideFromTop;
+    animation-delay: 160s;
+}
+.caption33 {
+    animation-name: slideFromTop;
+    animation-delay: 160s;
+}
+.image34 {
+    animation-name: slideFromLeft;
+    animation-delay: 165s;
+}
+.caption34 {
+    animation-name: slideFromLeft;
+    animation-delay: 165s;
+}
+
+/* Modify the keyframe animations for the new images */
+@keyframes slideFromTop {
+    0% {
+        top: -100%;
+        opacity: 0;
+    }
+    50% {
+        top: 50%;
+        opacity: 1;
+    }
+    100% {
+        top: -100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+    50% {
+        left: 50%;
+        opacity: 1;
+    }
+    100% {
+        left: -100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes slideFromBottom {
+    0% {
+        top: 100%;
+        opacity: 0;
+    }
+    50% {
+        top: 50%;
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        left: 100%;
+        opacity: 0;
+    }
+    50% {
+        left: 50%;
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+/* Fade-in animation for the initial h1 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 600px){
+    .container {
+        display: none;
+    }
+    .phone {
+        display: flex;
+    }
+}
