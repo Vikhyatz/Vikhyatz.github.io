@@ -4,6 +4,7 @@ let questionText = document.getElementById('question');
 let container = document.querySelector('.container');
 let finalContainer = document.querySelector('.final-container');
 let gif = document.getElementById("videoElem")
+let audiooo = document.getElementById('audiooo');
 
 let currentQuestion = 1;
 
@@ -28,6 +29,7 @@ yesBtn.addEventListener('click', () => {
     } else if (currentQuestion === 4) {
         container.style.display = 'none';
         finalContainer.style.display = 'block';
+        audiooo.play();
     }
 });
 
