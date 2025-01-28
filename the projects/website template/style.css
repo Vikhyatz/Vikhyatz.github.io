@@ -361,6 +361,30 @@ button:hover {
     animation-delay: 165s;
 }
 
+.image35{
+    animation-name: lastOne;
+    animation-delay: 170s;
+}
+
+
+@keyframes lastOne {
+    0% {
+        top: 100%;
+        opacity: 0;
+    }
+    50% {
+        top: 50%;
+        opacity: 1;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
+        /* visibility: hidden; */
+    }
+}
+
+
+
 /* Modify the keyframe animations for the new images */
 @keyframes slideFromTop {
     0% {
