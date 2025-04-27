@@ -475,6 +475,7 @@ nav:hover{
 
 #certifications{
     width: 100%;
+    /* height: 700px; */
     height: 700px;
     display: flex;
     align-items: center;
@@ -492,11 +493,14 @@ nav:hover{
     width: 80vw;
     /* background-color: red; */
     height: 500px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
 
 }
 
 .certificationContent img{
-    width: 500px;
+    width: 450px;
 }
 
 .cert{
