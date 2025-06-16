@@ -1,103 +1,112 @@
-import Image from "next/image";
+"use client";
+import { useEffect, useState, useRef } from "react";
+import { CommandPalette } from "../components/CommandPalette";
+
+import { AnimatePresence, motion } from 'framer-motion';
+import { LettersPullUp } from '../components/TextAnimation'
+import Granim from "granim";
+
+// rough notation
+import { annotate } from "rough-notation";
+
+
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+  const ref = useRef(null)
+  const ref2 = useRef(null)
+
+  // rough notation configuration
+  useEffect(() => {
+    if (ref.current) {
+      const annotation = annotate(ref.current, {
+        type: "highlight",
+        color: "black",
+        animationDuration: 1000,
+        iterations: 1,
+        padding: 2,
+        roughness: 8,
+        multiline: true
+      });
+
+      annotation.show();
+    }
+  }, []);
+
+  useEffect(() => {
+    if (ref2.current) {
+      const annotation = annotate(ref2.current, {
+        type: "highlight",
+        color: "black",
+        animationDuration: 1000,
+        iterations: 1,
+        padding: 2,
+        roughness: 8,
+        
+      });
+
+      setTimeout(() => {
+        annotation.show();
+    }, 1000);
+
+    }
+  }, []);
+
+  // granim configurations
+  useEffect(() => {
+    new Granim({
+      element: '#granim-canvas',
+      name: 'granim',
+      opacity: [1, 1],
+      states: {
+        "default-state": {
+          gradients: [
+            ['#0f2027', '#203a43'],
+            ['#141e30', '#243b55'],
+            ['#232526', '#414345'],
+            ['#000000', '#434343'],
+          ]
+        }
+      }
+    });
+
+  }, [])
+
+
+  return (
+    <>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={typeof window !== 'undefined' ? window.location.pathname : 'server'}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.4 }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <main className="min-h-screen flex items-center justify-center text-center relative">
+
+            {/* granim canvas */}
+            <canvas className="w-full h-full fixed inset-0 z-0" id="granim-canvas"></canvas>
+
+            {/* hero content */}
+            <div className="z-10 w-full flex flex-col items-center justify-center px-4 pt-32 max-md:pt-28">
+              <LettersPullUp text="Vikhyat gupta" />
+              <div className="text-xl text-[#777777] md:w-2xl w-full max-w-lg drop-shadow-sm max-md:text-base mt-10">
+                <div ref={ref} className="text-center text-wrap">
+                  a developer who loves crafting sleek,
+                </div>
+                <div ref={ref2} className="text-center text-wrap">
+                  functional web experiences.
+                </div>
+                <span className="block">Explore my work, skills, and passion for building things that just feel right.</span>
+              </div>
+              <p className="text-xl text-[#777777] drop-shadow-sm max-md:text-base mt-10">
+                Press <span className="font-mono">⌘K</span> / <span className="font-mono">Ctrl+K</span> to begin
+              </p>
+            </div>
+          </main>
+        </motion.div>
+      </AnimatePresence>
+    </>
   );
 }

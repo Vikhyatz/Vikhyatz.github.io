@@ -1,0 +1,16 @@
+page headings: npm install @barba/core
+
+----------- cursor: https://stephenscaff.github.io/react-animated-cursor/
+
+for animation: animejs
+
+gradients background help: https://sarcadass.github.io/granim.js/index.html
+
+progress bar: https://kimmobrunfeldt.github.io/progressbar.js/
+
+name heading animation: https://tobiasahlin.com/moving-letters/#3
+
+
+
+for page transition:
+https://www.youtube.com/watch?v=8voRA_DMuFM
