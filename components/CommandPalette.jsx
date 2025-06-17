@@ -79,6 +79,7 @@ export function CommandPalette({ onClose }) {
             onChange={e => setInput(e.target.value)}
             className="bg-transparent w-full focus:outline-none text-white placeholder-gray-400"
             placeholder="Jump to sections..."
+            // autoFocus="true"
           />
         </div>
         <ul className="max-h-60 overflow-y-auto">

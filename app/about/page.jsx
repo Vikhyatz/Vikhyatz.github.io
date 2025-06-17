@@ -26,8 +26,6 @@ export default function Home() {
       padding: 2,
       multiline: true
     });
-    // 
-    // bf77f6
 
     const annotation3 = annotate(first1.current, {
       type: "highlight",
@@ -46,7 +44,6 @@ export default function Home() {
       padding: 2,
       multiline: true
     });
-    // ff69b480
 
     const annotation4 = annotate(third.current, {
       type: "highlight",
@@ -56,10 +53,7 @@ export default function Home() {
       padding: 2,
       multiline: true
     });
-    // d9b2f775
 
-
-    // ff69b480
 
     annotation3.show()
     setTimeout(() => {

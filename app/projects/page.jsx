@@ -65,13 +65,13 @@ export default function Projects() {
             projectIcon: <FaWhatsapp size={45} className="ml-8" />,
             githubLink: "https://github.com/Vikhyatz/whatsapp-clone",
             // openLink: "https://lab-code-sharing.vercel.app/",
-            projectType: "Minor",
+            projectType: "Minor Project",
             title: "Whatsapp Clone",
             description: "A WhatsApp clone built using EJS, MongoDB, Node.js, and Express — featuring real-time messaging, user authentication, and chat storage.",
             tags: ["node", "express", "socket.io", "ejs", "authentication"]
         },
         {
-            projectIcon: <FaMusic size={45} className="ml-8" />,
+            projectIcon: <FaMusic size={40} className="ml-8" />,
             githubLink: "https://github.com/Vikhyatz/youtube-player",
             // openLink: "https://lab-code-sharing.vercel.app/",
             projectType: "Minor Project",
@@ -168,86 +168,89 @@ export default function Projects() {
                         <canvas className="w-full h-screen absolute z-0 " id="granim-canvas"></canvas>
                         <div className="z-10 w-full flex justify-center ">
 
-                            <div className="relative w-full max-w-4xl mx-auto mt-10">
+                            <div className="relative w-full max-w-4xl mx-auto mt-10 flex flex-col items-center">
+                                <h1 className="text-3xl sm:text-4xl md:text-5xl flex items-center mb-10"><IoIosArrowForward className="inline" size={35} />cd Projects</h1>
 
                                 {/* Slider */}
-                                <div ref={sliderRef} className="keen-slider rounded-xl ">
+                                <div ref={sliderRef} className="keen-slider rounded-xl">
                                     {ProjectsArr.map((project, idx) => (
                                         <div
                                             key={idx}
-                                            className="keen-slider__slide flex items-center flex-col justify-center text-white text-xl "
+                                            className="keen-slider__slide flex items-center flex-col justify-center text-white text-base sm:text-lg md:text-xl"
                                         >
-                                            <div className="w-2/3 rounded-xl backdrop-blur-md bg-white/5 border border-white/30 shadow-lg flex flex-col  p-6 gap-4 transition-transform duration-300">
+                                            <div className="w-11/12 sm:w-4/5 md:w-2/3 rounded-xl backdrop-blur-md bg-white/5 border border-white/30 shadow-lg flex flex-col p-4 sm:p-6 gap-4 md:gap-6 transition-transform duration-300">
 
+                                                {/* Top Row: Icon and Links */}
                                                 <div className="flex justify-between w-full items-center">
-                                                    {/* <FaDiscord size={45} className="ml-8 text-[#5D69F2]" /> */}
                                                     {project.projectIcon}
-                                                    <div className="flex gap-5 mr-8">
-                                                        {project.openLink && <Link href={project.openLink}><FiExternalLink size={40} /></Link>}
-                                                        {project.githubLink && <Link href={project.githubLink}><LuGithub size={40} /></Link>}
+                                                    <div className="flex gap-4 sm:gap-5 mr-4 sm:mr-8">
+                                                        {project.openLink && <Link href={project.openLink}><FiExternalLink size={30} className="sm:text-3xl md:text-4xl" /></Link>}
+                                                        {project.githubLink && <Link href={project.githubLink}><LuGithub size={30} className="sm:text-3xl md:text-4xl" /></Link>}
                                                     </div>
                                                 </div>
 
-                                                {/* project type */}
-                                                <span className="rounded-4xl w-fit transition-all duration-100 bg-[#111D2E] text-[#4493f8] hover:bg-[#1F6FEB] hover:text-white px-4 py-1 text-[18px] cursor-pointer ml-8 mt-10">{project.projectType}</span>
+                                                {/* Project Type Tag */}
+                                                <span className="rounded-full w-fit transition-all duration-100 bg-[#111D2E] text-[#4493f8] hover:bg-[#1F6FEB] hover:text-white px-3 py-1 text-sm sm:text-base md:text-[18px] ml-2 sm:ml-4 mt-6">
+                                                    {project.projectType}
+                                                </span>
 
-                                                {/* heading */}
-                                                <h1 className="text-4xl ml-8">{project.title}</h1>
+                                                {/* Heading */}
+                                                <h1 className="text-2xl sm:text-3xl md:text-4xl ml-2 sm:ml-4">{project.title}</h1>
 
-                                                {/* description */}
-                                                <p className="ml-8 mt-3 w-4/5">
+                                                {/* Description */}
+                                                <p className="ml-2 sm:ml-4 mt-2 sm:mt-3 w-full sm:w-4/5">
                                                     {project.description}
                                                 </p>
 
-                                                {/* warning */}
+                                                {/* Warning */}
                                                 {project.warning && (
-                                                    <div className="text-red-600 flex justify-center items-center ml-8 border-2 rounded-xl bg-red-600/20 p-2 w-4/5">
-                                                        <IoIosWarning className="mx-3" size={50} />
-                                                        <p className="text-red-400 text-[18px]">Sockets might not work as expected on Vercel, since it uses a serverless deployment model.</p>
+                                                    <div className="text-red-600 flex justify-center items-center ml-2 sm:ml-4 border-2 rounded-xl bg-red-600/20 p-2 w-full sm:w-4/5">
+                                                        <IoIosWarning className="mx-2 sm:mx-3" size={30} />
+                                                        <p className="text-red-400 text-sm sm:text-base md:text-[18px]">
+                                                            {project.warning}
+                                                        </p>
                                                     </div>
                                                 )}
 
-                                                {/* tags */}
-                                                <div className="ml-8 flex gap-2 my-10 flex-wrap w-4/5">
-                                                    {/* TODO: map projects.tags a sub array */}
+                                                {/* Tags */}
+                                                <div className="ml-2 sm:ml-4 flex gap-2 my-6 sm:my-10 flex-wrap w-full sm:w-4/5">
                                                     {project.tags.map((tag, indx) => (
                                                         <Tag name={tag} key={indx} />
                                                     ))}
-
                                                 </div>
                                             </div>
                                         </div>
-
                                     ))}
-
                                 </div>
-                                <div className="flex justify-center mt-6 gap-3">
+
+                                {/* Dots */}
+                                <div className="flex justify-center mt-4 sm:mt-6 gap-2 sm:gap-3">
                                     {projectsLengthArr.map((idx) => (
                                         <button
                                             key={idx}
                                             onClick={() => instanceRef.current?.moveToIdx(idx)}
-                                            className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === idx ? "bg-white scale-110" : "bg-gray-500"
+                                            className={`w-2 sm:w-3 h-2 sm:h-3 rounded-full transition-all duration-300 ${currentSlide === idx ? "bg-white scale-110" : "bg-gray-500"
                                                 }`}
                                         ></button>
                                     ))}
                                 </div>
 
                                 {/* Arrows */}
-                                <div className="w-full flex justify-between mt-8">
+                                <div className="w-full flex justify-between mt-4 sm:mt-8">
                                     <button
                                         onClick={() => instanceRef.current?.prev()}
-                                        className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 hover:bg-white/20 rounded-full backdrop-blur-md text-white"
+                                        className="absolute top-1/2 left-0 transform -translate-y-1/2 p-1 sm:p-2 hover:bg-white/20 rounded-full backdrop-blur-md text-white"
                                     >
-                                        <IoIosArrowBack size={40} />
+                                        <IoIosArrowBack size={30} className="sm:size-[40px]" />
                                     </button>
                                     <button
                                         onClick={() => instanceRef.current?.next()}
-                                        className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 hover:bg-white/20 rounded-full backdrop-blur-md text-white duration-300 transition-all"
+                                        className="absolute top-1/2 right-0 transform -translate-y-1/2 p-1 sm:p-2 hover:bg-white/20 rounded-full backdrop-blur-md text-white"
                                     >
-                                        <IoIosArrowForward size={40} />
+                                        <IoIosArrowForward size={30} className="sm:size-[40px]" />
                                     </button>
-
                                 </div>
+
                             </div>
 
 
