@@ -14,3 +14,37 @@ name heading animation: https://tobiasahlin.com/moving-letters/#3
 
 for page transition:
 https://www.youtube.com/watch?v=8voRA_DMuFM
+
+
+🚀 Frontend Tools / Languages:
+Next.js**
+React**
+JS**
+JavaScript**
+tailwind**
+
+🔧 Backend Tools / Languages:
+Node.js**
+Express**
+MongoDB**
+SQL**
+Python**
+
+TOOLS:
+Git**
+GitHub**
+Vercel**
+npm**
+Postman**
+
+
+<FaReact size={50} className="text-cyan-400 hover:scale-110 transition-transform duration-300" />
+          <SiNextdotjs size={50} className="text-gray-300 hover:scale-110 transition-transform duration-300" />
+
+
+          <FaNodeJs size={50} className="text-green-500 hover:scale-110 transition-transform duration-300" />
+          
+          <SiMongodb size={50} className="text-green-400 hover:scale-110 transition-transform duration-300" />
+          <SiTailwindcss size={50} className="text-cyan-300 hover:scale-110 transition-transform duration-300" />
+          <SiJavascript size={50} className="text-yellow-400 hover:scale-110 transition-transform duration-300" />
+          <FaPython size={50} className="text-blue-300 hover:scale-110 transition-transform duration-300" />

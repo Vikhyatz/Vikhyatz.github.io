@@ -169,7 +169,7 @@ export default function Projects() {
                         <div className="z-10 w-full flex justify-center ">
 
                             <div className="relative w-full max-w-4xl mx-auto mt-10 flex flex-col items-center">
-                                <h1 className="text-3xl sm:text-4xl md:text-5xl flex items-center mb-10"><IoIosArrowForward className="inline" size={35} />cd Projects</h1>
+                                <h1 className="text-3xl sm:text-4xl md:text-4xl flex items-center mb-10">$ ls /Projects</h1>
 
                                 {/* Slider */}
                                 <div ref={sliderRef} className="keen-slider rounded-xl">

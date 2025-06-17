@@ -121,7 +121,7 @@ export default function Home() {
                   alt="Profile"
                 />
                 <div className="text-center md:text-left max-w-xl">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold flex items-center"><IoIosArrowForward className="inline" size={35} />cd About Me</h1>
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold flex items-center">$ ls /About Me</h1>
                   <p className="text-base sm:text-lg md:text-xl mt-6">
                     I’m a <span ref={first1}>first-year college student</span> and <span ref={first}>Fullstack developer</span> based in Punjab, India. Currently focusing on building real-world
                     projects and sharpening my skills in <span ref={second}>Next.js, React, and backend development</span>.
