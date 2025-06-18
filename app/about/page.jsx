@@ -4,7 +4,6 @@ import { CommandPalette } from "../../components/CommandPalette";
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { LettersPullUp } from '../../components/TextAnimation'
-import Granim from "granim";
 import { annotate } from "rough-notation";
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -69,25 +68,6 @@ export default function Home() {
 
 
 
-  useEffect(() => {
-    new Granim({
-      element: '#granim-canvas',
-      name: 'granim',
-      opacity: [1, 1],
-      states: {
-        "default-state": {
-          gradients: [
-            ['#0f2027', '#203a43'],       // Deep teal to charcoal
-            ['#141e30', '#243b55'],       // Navy to steel blue
-            ['#232526', '#414345'],       // Gunmetal to dark gray
-            ['#000000', '#434343'],       // Pure black to soft black
-          ]
-        }
-      }
-    });
-
-  }, [])
-
   const [showPalette, setShowPalette] = useState(false);
 
   useEffect(() => {
@@ -112,7 +92,6 @@ export default function Home() {
           transition={{ duration: 0.4 }}
         >
           <main className="h-screen flex items-center justify-center w-full">
-            <canvas className="w-full h-screen absolute z-0 " id="granim-canvas"></canvas>
             <div className="z-10 w-full flex justify-center ">
               <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl mx-auto px-4 py-8">
                 <img

@@ -4,7 +4,6 @@ import { CommandPalette } from "../components/CommandPalette";
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { LettersPullUp } from '../components/TextAnimation'
-import Granim from "granim";
 
 // rough notation
 import { annotate } from "rough-notation";
@@ -51,26 +50,6 @@ export default function Home() {
 
     }
   }, []);
-
-  // granim configurations
-  useEffect(() => {
-    new Granim({
-      element: '#granim-canvas',
-      name: 'granim',
-      opacity: [1, 1],
-      states: {
-        "default-state": {
-          gradients: [
-            ['#0f2027', '#203a43'],
-            ['#141e30', '#243b55'],
-            ['#232526', '#414345'],
-            ['#000000', '#434343'],
-          ]
-        }
-      }
-    });
-
-  }, [])
 
 
   return (

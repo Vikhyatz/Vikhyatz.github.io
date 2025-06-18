@@ -26,7 +26,7 @@ const NavWrapper = () => {
                     <span className="ml-3 text-3xl max-md:text-xl font-bold">Vikhyat.dev</span>
                 </Link>
                 <button
-                    className="bg-[#777777] text-black px-4 py-2 rounded shadow-md z-20 max-md:px-2 max-md:py-1 max-md:text-sm"
+                    className="bg-[#777777] text-black px-4 py-2 shadow-md z-20 max-md:px-2 max-md:py-1 max-md:text-sm"
                     onClick={() => setShowPalette(true)}
                 >
                     cd /menu

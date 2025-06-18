@@ -16,13 +16,16 @@ const COMMANDS = [
   { label: "View Projects", icon: <FiFolder />, path: '/projects' },
   { label: "View Skills", icon: <IoMdSettings />, path: '/skills' },
   { label: "View Certifications", icon: <FaScroll />, path: '/certifications' },
-  { label: "Contact Me", icon: <FaPhoneAlt />, path: '/skills' },
+  { label: "Contact Me", icon: <FaPhoneAlt />, path: '/contact' },
 ];
 
 export function CommandPalette({ onClose }) {
   const Router = useRouter()
   
-
+  useEffect(() => {
+    Router.prefetch("/projects")
+  }, [])
+  
 
   const [input, setInput] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);

@@ -1,12 +1,9 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useState } from "react";
 import { CommandPalette } from "../../components/CommandPalette";
-import Granim from "granim";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
-// import { IoIosArrowForward } from "react-icons/io";
-// import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { annotate } from "rough-notation";
 import { IoIosArrowForward, IoIosWarning } from "react-icons/io";
@@ -133,25 +130,6 @@ export default function Projects() {
         },
     });
 
-    useEffect(() => {
-        new Granim({
-            element: '#granim-canvas',
-            name: 'granim',
-            opacity: [1, 1],
-            states: {
-                "default-state": {
-                    gradients: [
-                        ['#0f2027', '#203a43'],       // Deep teal to charcoal
-                        ['#141e30', '#243b55'],       // Navy to steel blue
-                        ['#232526', '#414345'],       // Gunmetal to dark gray
-                        ['#000000', '#434343'],       // Pure black to soft black
-                    ]
-                }
-            }
-        });
-
-    }, [])
-
     const [showPalette, setShowPalette] = useState(false);
 
     return (
@@ -165,11 +143,11 @@ export default function Projects() {
                     transition={{ duration: 0.4 }}
                 >
                     <main className="h-screen flex items-center justify-center w-full">
-                        <canvas className="w-full h-screen absolute z-0 " id="granim-canvas"></canvas>
-                        <div className="z-10 w-full flex justify-center ">
+                        
+                        <div className="z-10 w-full flex justify-center">
 
                             <div className="relative w-full max-w-4xl mx-auto mt-10 flex flex-col items-center">
-                                <h1 className="text-3xl sm:text-4xl md:text-4xl flex items-center mb-10">$ ls /Projects</h1>
+                                <h1 className="text-3xl sm:text-4xl md:text-4xl font-bold flex items-center mb-10">$ ls /Projects</h1>
 
                                 {/* Slider */}
                                 <div ref={sliderRef} className="keen-slider rounded-xl">
@@ -178,7 +156,7 @@ export default function Projects() {
                                             key={idx}
                                             className="keen-slider__slide flex items-center flex-col justify-center text-white text-base sm:text-lg md:text-xl"
                                         >
-                                            <div className="w-11/12 sm:w-4/5 md:w-2/3 rounded-xl backdrop-blur-md bg-white/5 border border-white/30 shadow-lg flex flex-col p-4 sm:p-6 gap-4 md:gap-6 transition-transform duration-300">
+                                            <div className="w-11/12 sm:w-4/5 md:w-2/3 backdrop-blur-md bg-white/5 border border-white/30 shadow-lg flex flex-col p-4 sm:p-6 gap-4 md:gap-6 transition-transform duration-300">
 
                                                 {/* Top Row: Icon and Links */}
                                                 <div className="flex justify-between w-full items-center">

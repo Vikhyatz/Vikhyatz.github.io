@@ -1,11 +1,8 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { CommandPalette } from "../../components/CommandPalette";
 
 import { AnimatePresence, motion } from 'framer-motion';
-import { LettersPullUp } from '../../components/TextAnimation'
-import Granim from "granim";
-import { IoIosArrowForward } from "react-icons/io";
 
 import { FaReact, FaNodeJs, FaPython, FaGithub, FaNpm } from 'react-icons/fa';
 import { SiTailwindcss, SiNextdotjs, SiJavascript, SiMongodb, SiPostman, SiExpress } from 'react-icons/si';
@@ -41,26 +38,6 @@ export default function Home() {
         ]
     }
 
-
-    useEffect(() => {
-        new Granim({
-            element: '#granim-canvas',
-            name: 'granim',
-            opacity: [1, 1],
-            states: {
-                "default-state": {
-                    gradients: [
-                        ['#0f2027', '#203a43'],       // Deep teal to charcoal
-                        ['#141e30', '#243b55'],       // Navy to steel blue
-                        ['#232526', '#414345'],       // Gunmetal to dark gray
-                        ['#000000', '#434343'],       // Pure black to soft black
-                    ]
-                }
-            }
-        });
-
-    }, [])
-
     const [showPalette, setShowPalette] = useState(false);
 
     useEffect(() => {
@@ -85,10 +62,10 @@ export default function Home() {
                     transition={{ duration: 0.4 }}
                 >
                     <main className="h-screen flex items-center justify-center w-full">
-                        <canvas className="w-full h-screen absolute z-0 " id="granim-canvas"></canvas>
+                        
                         <div className="z-10 w-full flex justify-center ">
 
-                            <div className="rounded-xl backdrop-blur-md bg-white/5 border border-white/30 shadow-lg flex flex-col p-4 sm:p-6 gap-4 md:gap-6 transition-transform duration-300 w-full max-w-4xl mx-auto items-center">
+                            <div className="backdrop-blur-md bg-white/5 border border-white/30 shadow-lg flex flex-col p-4 sm:p-6 py-10 gap-4 md:gap-6 transition-transform duration-300 w-full max-w-4xl mx-auto items-center">
 
                                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold flex items-center">$ ls /Skills</h1>
 
@@ -97,7 +74,7 @@ export default function Home() {
                                         <button
                                             key={type}
                                             onClick={() => setActiveButton(type)}
-                                            className={`rounded-full transition-all duration-100 shadow-lg bg-black ${activeButton === type
+                                            className={` transition-all duration-100 shadow-lg bg-black ${activeButton === type
                                                     ? "text-white border-3 border-white"
                                                     : "text-gray-400"
                                                 } hover:text-white px-4 py-2 text-sm sm:text-base md:text-[18px] cursor-pointer border-3 border-black`}
