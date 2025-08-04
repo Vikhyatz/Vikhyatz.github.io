@@ -41,12 +41,12 @@ export default function Home() {
         iterations: 1,
         padding: 2,
         roughness: 8,
-        
+
       });
 
       setTimeout(() => {
         annotation.show();
-    }, 1000);
+      }, 1000);
 
     }
   }, []);
@@ -56,7 +56,6 @@ export default function Home() {
     <>
       <AnimatePresence mode="wait">
         <motion.div
-          key={typeof window !== 'undefined' ? window.location.pathname : 'server'}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

@@ -55,14 +55,13 @@ export default function Home() {
         <>
             <AnimatePresence mode="wait">
                 <motion.div
-                    key={typeof window !== 'undefined' ? window.location.pathname : 'server'}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.4 }}
                 >
                     <main className="h-screen flex items-center justify-center w-full">
-                        
+
                         <div className="z-10 w-full flex justify-center ">
 
                             <div className="backdrop-blur-md bg-white/5 border border-white/30 shadow-lg flex flex-col p-4 sm:p-6 py-10 gap-4 md:gap-6 transition-transform duration-300 w-full max-w-4xl mx-auto items-center">
@@ -75,8 +74,8 @@ export default function Home() {
                                             key={type}
                                             onClick={() => setActiveButton(type)}
                                             className={` transition-all duration-100 shadow-lg bg-black ${activeButton === type
-                                                    ? "text-white border-3 border-white"
-                                                    : "text-gray-400"
+                                                ? "text-white border-3 border-white"
+                                                : "text-gray-400"
                                                 } hover:text-white px-4 py-2 text-sm sm:text-base md:text-[18px] cursor-pointer border-3 border-black`}
                                         >
                                             {type.charAt(0).toUpperCase() + type.slice(1)}

@@ -17,9 +17,14 @@ export default function Projects() {
             name: "CS50x: Introduction to Computer Science – HarvardX (edX)"
         },
         {
+            image: "/cert3.png",
+            name: "CS50P: Introduction to Programming with Python – HarvardX (edX)"
+        },
+        {
             image: "/cert2.png",
             name: "site-on-sight winners"
         },
+        
     ]
 
     const certsLengthArr = Array.from(Array(certsArr.length).keys())
@@ -44,7 +49,6 @@ export default function Projects() {
         <>
             <AnimatePresence mode="wait">
                 <motion.div
-                    key={typeof window !== 'undefined' ? window.location.pathname : 'server'}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}

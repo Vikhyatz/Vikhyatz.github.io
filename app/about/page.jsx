@@ -85,7 +85,6 @@ export default function Home() {
     <>
       <AnimatePresence mode="wait">
         <motion.div
-          key={typeof window !== 'undefined' ? window.location.pathname : 'server'}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -95,7 +94,7 @@ export default function Home() {
             <div className="z-10 w-full flex justify-center ">
               <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl mx-auto px-4 py-8">
                 <img
-                  className="rounded-full w-48 h-48 sm:w-48 sm:h-48 md:w-48 md:h-48 lg:w-80 lg:h-80 object-cover mb-6 md:mb-0 md:mr-10"
+                  className="rounded-full w-48 h-48 sm:w-48 sm:h-48 md:w-48 md:h-48 lg:w-80 lg:h-80 object-cover md:mt-0 mt-30 mb-6 md:mb-0 md:mr-10"
                   src="/image.png"
                   alt="Profile"
                 />
