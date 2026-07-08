@@ -107,7 +107,7 @@ export default function Home() {
                   <p className="text-base sm:text-lg md:text-xl mt-4">
                     I am passionate about creating polished web apps, working independently to grow, and <span ref={third}>love building fullstack systems</span> and creative clones.
                   </p>
-                  <p className="text-base sm:text-lg md:text-xl mt-6">1st year BTech - CSE</p>
+                  <p className="text-base sm:text-lg md:text-xl mt-6">3rd year BTech - CSE</p>
                   <p className="text-base sm:text-lg md:text-xl mt-2">Email: vikhyatgupta61@gmail.com</p>
                   <p className="text-base sm:text-lg md:text-xl mt-2">Punjab, India - 140603</p>
                 </div>
