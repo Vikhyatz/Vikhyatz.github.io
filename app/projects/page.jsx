@@ -142,7 +142,7 @@ export default function Projects() {
                     <div className="z-10 w-full flex justify-center">
 
                         <div className="relative w-full max-w-4xl mx-auto mt-10 flex flex-col items-center">
-                            <h1 className="text-3xl sm:text-4xl md:text-4xl font-bold flex items-center mb-10">$ ls /Projects</h1>
+                            <h1 className="text-3xl sm:text-4xl md:text-4xl font-bold flex items-center mt-15 mb-5">$ ls /Projects</h1>
 
                             {/* Slider */}
                             <div ref={sliderRef} className="keen-slider rounded-xl">

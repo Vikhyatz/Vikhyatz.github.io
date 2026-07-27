@@ -24,6 +24,10 @@ export default function Projects() {
             image: "/cert2.png",
             name: "site-on-sight winners"
         },
+        {
+            image: "/cert4.png",
+            name: "Eclipse 6.0 Hackathon"
+        },
         
     ]
 

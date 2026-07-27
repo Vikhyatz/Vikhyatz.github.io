@@ -23,9 +23,12 @@ export default function GranimWrapper() {
     });
 
   }, [])
-  
+
   return (
-    <canvas className="w-full h-screen absolute z-0 " id="granim-canvas"></canvas>
+    <canvas
+      id="granim-canvas"
+      className="fixed inset-0 w-screen h-screen -z-10"
+    />
   )
 }
 
