@@ -17,7 +17,7 @@ export function LettersPullUp({
     if (ref.current) {
       const annotation = annotate(ref.current, {
         type: "box",
-        color: "black",
+        color: "#003153",
         animationDuration: 2000,
         iterations: 2,
         padding: 7,
@@ -28,8 +28,6 @@ export function LettersPullUp({
       annotation.show();
     }
   }, []);
-
-
 
   const splittedText = text.split('');
 
@@ -55,7 +53,7 @@ export function LettersPullUp({
           animate={isInView ? 'animate' : ''}
           custom={i}
           className={cn(
-            'text-7xl text-[#9f9f9f] mb-2 drop-shadow-lg max-md:text-4xl ',
+            'text-7xl text-[#ffffff] mb-2 drop-shadow-lg max-md:text-4xl ',
             className
           )}
         >

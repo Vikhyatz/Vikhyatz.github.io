@@ -23,10 +23,10 @@ const NavWrapper = () => {
         <header className="text-gray-600 backdrop-blur-2xl bg-black/80 w-full fixed top-0 left-0 z-20">
             <div className="container mx-auto flex p-4 flex-row justify-between items-center max-md:px-2">
                 <Link href="/" className="flex title-font font-medium items-center text-white md:mb-0">
-                    <span className="ml-3 text-3xl max-md:text-xl font-bold">Vikhyat.dev</span>
+                    <span className="ml-3 text-3xl max-md:text-xl font-bold font-mono">Vikhyat.dev</span>
                 </Link>
                 <button
-                    className="bg-[#777777] text-black px-4 py-2 shadow-md z-20 max-md:px-2 max-md:py-1 max-md:text-sm"
+                    className="font-mono text-[#bae6fd] bg-[#38bdf8]/15 border border-[#38bdf8]/30 hover:bg-[#38bdf8]/25 hover:border-[#38bdf8]/50 transition-colors px-4 py-2 rounded z-20 max-md:px-2 max-md:py-1 max-md:text-sm"
                     onClick={() => setShowPalette(true)}
                 >
                     cd /menu

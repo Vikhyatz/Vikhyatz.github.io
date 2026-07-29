@@ -72,10 +72,10 @@ export function CommandPalette({ onClose }) {
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
         transition={{ duration: 0.2 }}
-        className="bg-white/10 backdrop-blur-md text-white rounded-xl w-[90%] max-w-md shadow-xl border border-white/20"
+        className="bg-white/10 backdrop-blur-md text-white rounded-xl w-[90%] max-w-md shadow-xl border border-[#38bdf8]/30"
       >
-        <div className="flex items-center gap-2 p-4 border-b border-neutral-700">
-          <span className="text-white font-mono">{">"}</span>
+        <div className="flex items-center gap-2 p-4 border-b border-[#38bdf8]/20">
+          <span className="text-[#bae6fd] font-mono">{">"}</span>
           <input
             type="text"
             value={input}
@@ -91,13 +91,13 @@ export function CommandPalette({ onClose }) {
               <Link
                 href={cmd.path}
                 key={i}
-                className={`flex justify-between items-center px-4 py-2 cursor-pointer ${selectedIndex === i ? "bg-neutral-700 text-white" : "hover:bg-neutral-800"}`}
+                className={`flex justify-between items-center px-4 py-2 cursor-pointer transition-colors ${selectedIndex === i ? "bg-[#38bdf8]/20 text-[#bae6fd]" : "hover:bg-white/5"}`}
                 onClick={() => {
                   onClose();
                 }}
               >
                 <div className="flex items-center gap-3">
-                  <span>{cmd.icon}</span>
+                  <span className={selectedIndex === i ? "text-[#bae6fd]" : "text-[#38bdf8]/70"}>{cmd.icon}</span>
                   <span>{cmd.label}</span>
                 </div>
               </Link>

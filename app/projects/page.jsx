@@ -30,7 +30,7 @@ export default function Projects() {
 
     const ProjectsArr = [
         {
-            projectIcon: <MdRateReview size={45} className="ml-8" />,
+            projectIcon: <MdRateReview className="text-3xl sm:text-4xl md:text-[45px] ml-2 sm:ml-4" />,
             githubLink: "https://github.com/Vikhyatz/ReviewSync",
             projectType: "Major Project",
             title: "Review Sync",
@@ -38,7 +38,7 @@ export default function Projects() {
             tags: ["next.js", "monaco-editor", "mongodb", "socket.io"]
         },
         {
-            projectIcon: <FaDiscord size={45} className="ml-8" />,
+            projectIcon: <FaDiscord className="text-3xl sm:text-4xl md:text-[45px] ml-2 sm:ml-4" />,
             githubLink: "https://github.com/Vikhyatz/discord-next",
             openLink: "https://discord-next-seven.vercel.app/",
             projectType: "Major Project",
@@ -48,7 +48,7 @@ export default function Projects() {
             tags: ["next.js", "react", "mongodb", "socket.io"]
         },
         {
-            projectIcon: <LuCodeXml size={45} className="ml-8" />,
+            projectIcon: <LuCodeXml className="text-3xl sm:text-4xl md:text-[45px] ml-2 sm:ml-4" />,
             githubLink: "https://github.com/Vikhyatz/lab-code-sharing",
             openLink: "https://lab-code-sharing.vercel.app/",
             projectType: "Major Project",
@@ -57,7 +57,7 @@ export default function Projects() {
             tags: ["next.js", "react", "mongodb",]
         },
         {
-            projectIcon: <PiBirdLight size={45} className="ml-8" />,
+            projectIcon: <PiBirdLight className="text-3xl sm:text-4xl md:text-[45px] ml-2 sm:ml-4" />,
             githubLink: "https://github.com/Vikhyatz/clickey-bird",
             projectType: "real-time gaming",
             title: "Clickey Bird",
@@ -65,7 +65,7 @@ export default function Projects() {
             tags: ["node", "express", "socket.io", "ejs"]
         },
         {
-            projectIcon: <FaWhatsapp size={45} className="ml-8" />,
+            projectIcon: <FaWhatsapp className="text-3xl sm:text-4xl md:text-[45px] ml-2 sm:ml-4" />,
             githubLink: "https://github.com/Vikhyatz/whatsapp-clone",
             projectType: "Minor Project",
             title: "Whatsapp Clone",
@@ -73,7 +73,7 @@ export default function Projects() {
             tags: ["node", "express", "socket.io", "ejs", "authentication"]
         },
         {
-            projectIcon: <FaMusic size={40} className="ml-8" />,
+            projectIcon: <FaMusic className="text-3xl sm:text-4xl md:text-[40px] ml-2 sm:ml-4" />,
             githubLink: "https://github.com/Vikhyatz/youtube-player",
             projectType: "Minor Project",
             title: "Youtube Player",
@@ -81,28 +81,28 @@ export default function Projects() {
             tags: ["node", "express"]
         },
         {
-            projectIcon: <FaGamepad size={45} className="ml-8" />,
+            projectIcon: <FaGamepad className="text-3xl sm:text-4xl md:text-[45px] ml-2 sm:ml-4" />,
             projectType: "Minor Project",
             title: "Maze Game",
             description: "A browser-based Maze Game built with HTML, CSS, and JavaScript, featuring a character inspired by Among Us.",
             tags: ["HTML", "CSS", "JS"]
         },
         {
-            projectIcon: <TbMathSymbols size={45} className="ml-8" />,
+            projectIcon: <TbMathSymbols className="text-3xl sm:text-4xl md:text-[45px] ml-2 sm:ml-4" />,
             projectType: "Beginner",
             title: "Determinant Calc",
             description: "A Determinant Calculator built with HTML, CSS, and JavaScript that computes the determinant of square matrices.",
             tags: ["HTML", "CSS", "JS"]
         },
         {
-            projectIcon: <TbLockPassword size={45} className="ml-8" />,
+            projectIcon: <TbLockPassword className="text-3xl sm:text-4xl md:text-[45px] ml-2 sm:ml-4" />,
             projectType: "Beginner",
             title: "Password Gen",
             description: "A Password Generator built with HTML, CSS, and JavaScript that creates secure, random passwords based on Google's recommended password standards.",
             tags: ["HTML", "CSS", "JS"]
         },
         {
-            projectIcon: <TbBackground size={45} className="ml-8" />,
+            projectIcon: <TbBackground className="text-3xl sm:text-4xl md:text-[45px] ml-2 sm:ml-4" />,
             projectType: "Beginner",
             title: "Background Gen",
             description: "A web tool built with HTML, CSS, and JavaScript that generates random backgrounds — or lets you check custom RGB values",
@@ -131,106 +131,113 @@ export default function Projects() {
     return (
         <>
             <AnimatePresence mode="wait">
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.4 }}
-            >
-                <main className="h-screen flex items-center justify-center w-full">
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.4 }}
+                >
+                    <main className="min-h-screen flex items-center justify-center w-full px-3 sm:px-0 pt-24 pb-10 sm:pt-16">
 
-                    <div className="z-10 w-full flex justify-center">
+                        <div className="z-10 w-full flex justify-center">
 
-                        <div className="relative w-full max-w-4xl mx-auto mt-10 flex flex-col items-center">
-                            <h1 className="text-3xl sm:text-4xl md:text-4xl font-bold flex items-center mt-15 mb-5">$ ls /Projects</h1>
+                            <div className="relative w-full max-w-4xl mx-auto flex flex-col items-center">
+                                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold flex items-center mb-4 sm:mb-6">$ ls /Projects</h1>
 
-                            {/* Slider */}
-                            <div ref={sliderRef} className="keen-slider rounded-xl">
-                                {ProjectsArr.map((project, idx) => (
-                                    <div
-                                        key={idx}
-                                        className="keen-slider__slide flex items-center flex-col justify-center text-white text-base sm:text-lg md:text-xl"
-                                    >
-                                        <div className="w-11/12 sm:w-4/5 md:w-2/3 backdrop-blur-md bg-white/5 border border-white/30 shadow-lg flex flex-col p-4 sm:p-6 gap-4 md:gap-6 transition-transform duration-300 rounded">
+                                {/* Slider */}
+                                <div ref={sliderRef} className="keen-slider rounded-xl">
+                                    {ProjectsArr.map((project, idx) => (
+                                        <div
+                                            key={idx}
+                                            className="keen-slider__slide flex items-center flex-col justify-center text-white text-base sm:text-lg md:text-xl"
+                                        >
+                                            <div className="w-full sm:w-4/5 md:w-2/3 backdrop-blur-2xl bg-white/5 border border-white/30 shadow-lg flex flex-col p-4 sm:p-6 gap-3 sm:gap-4 md:gap-6 transition-transform duration-300 rounded">
 
-                                            {/* Top Row: Icon and Links */}
-                                            <div className="flex justify-between w-full items-center">
-                                                {project.projectIcon}
-                                                <div className="flex gap-4 sm:gap-5 mr-4 sm:mr-8">
-                                                    {project.openLink && <Link href={project.openLink}><FiExternalLink size={30} className="sm:text-3xl md:text-4xl" /></Link>}
-                                                    {project.githubLink && <Link href={project.githubLink}><LuGithub size={30} className="sm:text-3xl md:text-4xl" /></Link>}
+                                                {/* Top Row: Icon and Links */}
+                                                <div className="flex justify-between w-full items-center">
+                                                    {project.projectIcon}
+                                                    <div className="flex gap-3 sm:gap-5 mr-2 sm:mr-8">
+                                                        {project.openLink && <Link href={project.openLink}><FiExternalLink className="text-xl sm:text-3xl md:text-4xl" /></Link>}
+                                                        {project.githubLink && <Link href={project.githubLink}><LuGithub className="text-xl sm:text-3xl md:text-4xl" /></Link>}
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            {/* Project Type Tag */}
-                                            <span className="rounded-full w-fit transition-all duration-100 bg-[#111D2E] text-[#4493f8] hover:bg-[#1F6FEB] hover:text-white px-3 py-1 text-sm sm:text-base md:text-[18px] ml-2 sm:ml-4 mt-6">
-                                                {project.projectType}
-                                            </span>
+                                                {/* Project Type Tag */}
+                                                <span className="rounded-full w-fit transition-all duration-100 bg-[#111D2E] text-[#4493f8] hover:bg-[#1F6FEB] hover:text-white px-2.5 py-1 text-xs sm:text-base md:text-[18px] ml-2 sm:ml-4 mt-3 sm:mt-6">
+                                                    {project.projectType}
+                                                </span>
 
-                                            {/* Heading */}
-                                            <h1 className="text-2xl sm:text-3xl md:text-4xl ml-2 sm:ml-4">{project.title}</h1>
+                                                {/* Heading */}
+                                                <h1 className="text-xl sm:text-3xl md:text-4xl ml-2 sm:ml-4">{project.title}</h1>
 
-                                            {/* Description */}
-                                            <p className="ml-2 sm:ml-4 mt-2 sm:mt-3 w-full sm:w-4/5">
-                                                {project.description}
-                                            </p>
+                                                {/* Description */}
+                                                <p className="ml-2 sm:ml-4 mt-1 sm:mt-3 w-full sm:w-4/5 text-sm sm:text-lg md:text-xl leading-relaxed">
+                                                    {project.description}
+                                                </p>
 
-                                            {/* Warning */}
-                                            {project.warning && (
-                                                <div className="text-red-600 flex justify-center items-center ml-2 sm:ml-4 border-2 rounded-xl bg-red-600/20 p-2 w-full sm:w-4/5">
-                                                    <IoIosWarning className="mx-2 sm:mx-3" size={30} />
-                                                    <p className="text-red-400 text-sm sm:text-base md:text-[18px]">
-                                                        {project.warning}
-                                                    </p>
+                                                {/* Warning */}
+                                                {project.warning && (
+                                                    <div className="mt-2 sm:mt-5 rounded-xl border border-red-500/20 bg-[#13090a] px-3 py-2.5 sm:px-4 sm:py-3 font-mono">
+                                                        <div className="flex items-center gap-2">
+                                                            <IoIosWarning className="text-red-400 text-base sm:text-lg shrink-0" />
+                                                            <span className="text-red-300 text-xs sm:text-base">
+                                                                Warning
+                                                            </span>
+                                                        </div>
+                                                        <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-zinc-300 leading-5 sm:leading-6">
+                                                            {project.warning}
+                                                        </p>
+                                                    </div>
+                                                )}
+
+                                                {/* Tags */}
+                                                <div className="ml-2 sm:ml-4 flex gap-1.5 sm:gap-2 my-3 sm:my-10 flex-wrap w-full sm:w-4/5">
+                                                    {project.tags.map((tag, indx) => (
+                                                        <Tag name={tag} key={indx} />
+                                                    ))}
                                                 </div>
-                                            )}
-
-                                            {/* Tags */}
-                                            <div className="ml-2 sm:ml-4 flex gap-2 my-6 sm:my-10 flex-wrap w-full sm:w-4/5">
-                                                {project.tags.map((tag, indx) => (
-                                                    <Tag name={tag} key={indx} />
-                                                ))}
                                             </div>
                                         </div>
-                                    </div>
-                                ))}
-                            </div>
+                                    ))}
+                                </div>
 
-                            {/* Dots */}
-                            <div className="flex justify-center mt-4 sm:mt-6 gap-2 sm:gap-3">
-                                {projectsLengthArr.map((idx) => (
+                                {/* Dots */}
+                                <div className="flex justify-center mt-4 sm:mt-6 gap-2 sm:gap-3">
+                                    {projectsLengthArr.map((idx) => (
+                                        <button
+                                            key={idx}
+                                            onClick={() => instanceRef.current?.moveToIdx(idx)}
+                                            className={`w-2 sm:w-3 h-2 sm:h-3 rounded-full transition-all duration-300 ${currentSlide === idx ? "bg-white scale-110" : "bg-gray-500"
+                                                }`}
+                                        ></button>
+                                    ))}
+                                </div>
+
+                                {/* Arrows */}
+                                <div className="w-full flex justify-between mt-4 sm:mt-8">
                                     <button
-                                        key={idx}
-                                        onClick={() => instanceRef.current?.moveToIdx(idx)}
-                                        className={`w-2 sm:w-3 h-2 sm:h-3 rounded-full transition-all duration-300 ${currentSlide === idx ? "bg-white scale-110" : "bg-gray-500"
-                                            }`}
-                                    ></button>
-                                ))}
+                                        onClick={() => instanceRef.current?.prev()}
+                                        className="absolute top-1/2 -left-1 sm:left-0 transform -translate-y-1/2 p-1 sm:p-2 hover:bg-white/20 rounded-full backdrop-blur-md text-white"
+                                        aria-label="Previous project"
+                                    >
+                                        <IoIosArrowBack className="text-2xl sm:text-4xl" />
+                                    </button>
+                                    <button
+                                        onClick={() => instanceRef.current?.next()}
+                                        className="absolute top-1/2 -right-1 sm:right-0 transform -translate-y-1/2 p-1 sm:p-2 hover:bg-white/20 rounded-full backdrop-blur-md text-white"
+                                        aria-label="Next project"
+                                    >
+                                        <IoIosArrowForward className="text-2xl sm:text-4xl" />
+                                    </button>
+                                </div>
+
                             </div>
 
-                            {/* Arrows */}
-                            <div className="w-full flex justify-between mt-4 sm:mt-8">
-                                <button
-                                    onClick={() => instanceRef.current?.prev()}
-                                    className="absolute top-1/2 left-0 transform -translate-y-1/2 p-1 sm:p-2 hover:bg-white/20 rounded-full backdrop-blur-md text-white"
-                                >
-                                    <IoIosArrowBack size={30} className="sm:size-[40px]" />
-                                </button>
-                                <button
-                                    onClick={() => instanceRef.current?.next()}
-                                    className="absolute top-1/2 right-0 transform -translate-y-1/2 p-1 sm:p-2 hover:bg-white/20 rounded-full backdrop-blur-md text-white"
-                                >
-                                    <IoIosArrowForward size={30} className="sm:size-[40px]" />
-                                </button>
-                            </div>
 
+                            {showPalette && <CommandPalette onClose={() => setShowPalette(false)} />}
                         </div>
-
-
-                        {showPalette && <CommandPalette onClose={() => setShowPalette(false)} />}
-                    </div>
-                </main>
-            </motion.div>
+                    </main>
+                </motion.div>
             </AnimatePresence>
         </>
 
