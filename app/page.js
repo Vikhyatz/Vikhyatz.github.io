@@ -71,7 +71,7 @@ export default function Home() {
 
             {/* hero content */}
             <div className="z-10 w-full flex flex-col items-center justify-center px-4 pt-32 max-md:pt-28">
-              <LettersPullUp text="Vikhyat gupta" />
+              <LettersPullUp text="Vikhyat Gupta" />
               <div className="text-xl text-[#eef6fc]/90 md:w-2xl w-full max-w-lg drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] max-md:text-base mt-10">
                 <div ref={ref} className="text-center text-wrap">
                   a developer who loves crafting sleek,
