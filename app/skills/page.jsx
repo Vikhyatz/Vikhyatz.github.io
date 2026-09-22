@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { CommandPalette } from "../../components/CommandPalette";
 import { AnimatePresence, motion } from 'framer-motion';
 
-import { FaReact, FaNodeJs, FaPython, FaGithub, FaNpm } from 'react-icons/fa';
-import { SiTailwindcss, SiNextdotjs, SiJavascript, SiMongodb, SiPostman, SiExpress } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaPython, FaGithub, FaNpm, FaAws, FaLinux } from 'react-icons/fa';
+import { SiTailwindcss, SiNextdotjs, SiJavascript, SiMongodb, SiPostman, SiExpress, SiNginx, SiDocker } from 'react-icons/si';
 import { ImGit } from "react-icons/im";
 import { IoLogoVercel } from "react-icons/io5";
 import { TbSql } from "react-icons/tb";
@@ -32,6 +32,12 @@ export default function Home() {
             { icon: <IoLogoVercel size={32} className="text-white" />, name: "vercel" },
             { icon: <FaNpm size={32} className="text-[#CB3837]" />, name: "npm" },
             { icon: <FaGithub size={32} className="text-white" />, name: "github" },
+        ],
+        devops: [
+            { icon: <SiNginx size={32} className="text-[#009639]" />, name: "nginx" },
+            { icon: <SiDocker size={32} className="text-[#2496ED]" />, name: "docker" },
+            { icon: <FaAws size={32} className="text-[#FF9900]" />, name: "aws" },
+            { icon: <FaLinux size={32} className="text-[#FCC624]" />, name: "linux" },
         ]
     };
 
@@ -82,7 +88,7 @@ export default function Home() {
 
                                     {/* Tabs styled like directory flags */}
                                     <div className="flex flex-wrap gap-2 pl-4">
-                                        {["frontend", "backend", "tools"].map((type) => (
+                                        {["frontend", "backend", "tools", "devops"].map((type) => (
                                             <button
                                                 key={type}
                                                 onClick={() => setActiveButton(type)}

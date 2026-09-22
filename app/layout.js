@@ -24,7 +24,7 @@ export const metadata = {
   robots: "index, follow",
   openGraph: {
     title: "Vikhyat Gupta | Full Stack Developer",
-    description: "Discover innovative web projects and skills by Vikhyat Gupta, built using modern web technologies.",
+    description: "Discover my innovative web projects and skills, built using modern web technologies.",
     url: "https://vikhyatz.github.io",
     siteName: "Vikhyat Gupta Portfolio",
     type: "website",

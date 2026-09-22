@@ -18,7 +18,7 @@ import { TbLockPassword } from "react-icons/tb";
 import { TbMathSymbols } from "react-icons/tb";
 import { TbBackground } from "react-icons/tb";
 import { MdRateReview } from "react-icons/md";
-
+import { SiVercel } from "react-icons/si";
 
 
 import { AnimatePresence, motion } from 'framer-motion';
@@ -29,6 +29,14 @@ import Link from "next/link";
 export default function Projects() {
 
     const ProjectsArr = [
+        {
+            projectIcon: <SiVercel className="text-3xl sm:text-4xl md:text-[45px] ml-2 sm:ml-4" />,
+            githubLink: "https://github.com/Vikhyatz/BuildRift",
+            projectType: "Major Project",
+            title: "BuildRift",
+            description: "BuildRift is a Vercel-like deployment platform that automates the process of building and deploying GitHub projects using Docker, Redis, and a Node.js worker, with real-time deployment logs and status tracking.",
+            tags: ["next.js", "docker", "redis", "mongodb", "sse"]
+        },
         {
             projectIcon: <MdRateReview className="text-3xl sm:text-4xl md:text-[45px] ml-2 sm:ml-4" />,
             githubLink: "https://github.com/Vikhyatz/ReviewSync",
